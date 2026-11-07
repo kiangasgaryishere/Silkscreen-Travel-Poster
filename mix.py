@@ -13,11 +13,10 @@ def add(t,d,amp,kind='scrape'):
  else:v=filt(v,900,6000)*np.exp(-tt/.008)
  v=v/max(1e-7,np.max(np.abs(v)));a=round(t*sr);b=min(n,a+m)
  if b>a:fx[a:b]+=amp*v[:b-a]
-for s in tl['scenes']:
- if s['id']=='turn':continue
- add(s['start']+.05,.39,.028,'scrape')
-for t in [0.34,2.2,12.8,21.9,27.6,38.5,42.95,48.9,61.9,66.98]:add(t,.11,.024,'clamp')
-for t in [14.0,15.3,19.5,24.1,29.4,40.0,46.1,50.7]:add(t,.065,.013,'tick')
+# Short air moves anticipate selected camera cuts; no repeating blade scrape.
+for t in [5.43,11.83,34.98,41.73]:add(t,.24,.012,'scrape')
+for t in [12.8,21.9,38.5,42.95]:add(t,.11,.020,'clamp')
+for t in [14.0,25.34,40.0,50.7]:add(t,.065,.010,'tick')
 # Very quiet non-tonal environmental air. No musical or periodic instrumental layer.
 noise=filt(rng.standard_normal(n),100,900);noise/=max(np.std(noise),1e-8);tt=np.arange(n)/sr
 bed=np.full(n,.0014);bed[(tt>32.1)&(tt<35.19)]=0;bed[(tt>41.2)&(tt<42.7)]=0

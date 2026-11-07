@@ -1,4 +1,5 @@
-import {makeTextures,paperSheet,inkFinish,wipeRegion,squeegee,ink,rectPath} from './engine/silk.js';
+import {makeTextures,inkFinish} from './engine/silk.js';
+import {cameraAt} from './camera.js';
 const TL=await(await fetch('timeline.json')).json();
 await Promise.all([document.fonts.load('700 48px Persian','برج ایفل'),document.fonts.load('400 40px Persian','آهن'),document.fonts.load('400 34px English','SUMMER')]);
 const c=document.getElementById('c'),g=c.getContext('2d');const W=1080,H=1920,PAPER='#F3EAD8',NAVY='#192D3C',RED='#BB503B',GOLD='#E3AF4E',BLUE='#548291',T=makeTextures(PAPER,24);
@@ -32,25 +33,19 @@ function rulers(y,p){rule(160,1172,760,NAVY,3);rule(865,y,3,NAVY,1172-y);rule(85
 function artCamera(){g.translate(0,-719);g.scale(1,1.8)}
 function city(p,t){landscape(p,t);fill(p.near,0,1380,1080,700)}
 function winterSky(p,t){city(p,t);circle(846,680,48,p.sky);for(let k=0;k<3;k++)beam(846-55*Math.cos(k*Math.PI/3),680-55*Math.sin(k*Math.PI/3),846+55*Math.cos(k*Math.PI/3),680+55*Math.sin(k*Math.PI/3),3,p.near)}
+function mixColor(a,b,t){return '#'+[1,3,5].map(i=>Math.round(lerp(parseInt(a.slice(i,i+2),16),parseInt(b.slice(i,i+2),16),t)).toString(16).padStart(2,'0')).join('')}
+function season(t){return Object.fromEntries(Object.keys(palettes.warm).map(k=>[k,mixColor(palettes.warm[k],palettes.cold[k],t)]))}
 function opener(t){
- const pull=smooth(t/1.15),z=lerp(2.4,1,pull),pivot=[540,1040];
- g.save();g.translate(...pivot);g.scale(z,z);g.translate(-pivot[0],-pivot[1]);
- city(palettes.warm,t);sun(830,645,58,GOLD);tower(540,1350,810,NAVY,{lit:RED});
- // A print pull changes the season at the spoken winter reveal. At the question,
- // the same tower is held between warm/cold inks: no exaggerated size claim.
- const cold=seg(t,2.12,2.65),split=t<3.45?cold:lerp(1,.5,smooth((t-3.45)/.65));
- if(cold>0){g.save();g.clip(wipeRegion([0,0,1080,2400],'left',split,19,20));winterSky(palettes.cold,t);tower(540,1350,810,NAVY,{lit:BLUE});g.restore()}
- g.restore();
- // The first ink pull is fast enough that the first spoken line starts on the
- // landmark, while its steep camera pullback delivers a visual reveal.
- if(t<.42){let x=lerp(-50,1140,t/.42);g.save();squeegee(g,[x,-40],[x,2100],[1,0],{color:RED,handle:0,scale:1});g.restore()}
+ const z=lerp(2.4,1,smooth(t/1.15)),cold=t<3.45?smooth((t-2.12)/.53):lerp(1,.32,smooth((t-3.45)/.65)),p=season(cold);
+ g.save();g.translate(540,1040);g.scale(z,z);g.translate(-540,-1040);
+ city(p,t);sun(830,645,58,mixColor(GOLD,BLUE,cold));tower(540,1350,810,NAVY,{lit:mixColor(RED,BLUE,cold)});g.restore();
 }
-function drawScene(i,t){const s=TL.scenes[i],u=t-s.start;let p=s.id==='cold'?palettes.cold:palettes.warm;
+function drawScene(i,t){const s=TL.scenes[i],u=t-s.start;let p=s.id==='cold'?season(smooth(u/.8)):palettes.warm;
  fill(p.sky,0,0,W,H);g.save();artCamera();
  if(s.id==='summer-winter')opener(t);
  else if(['return','end'].includes(s.id)){
-  city(p,t);sun(810,645,58,GOLD);tower(540,1350,810,NAVY,{lit:RED});
-  g.save();g.beginPath();g.rect(540,0,540,2400);g.clip();winterSky(palettes.cold,t);tower(540,1350,810,NAVY,{lit:BLUE});g.restore();
+  const phase=.5-.5*Math.cos((t-61.35)/10.271541667*Math.PI),pal=season(phase);
+  city(pal,t);sun(810,645,58,mixColor(GOLD,BLUE,phase));tower(540,1350,810,NAVY,{lit:mixColor(RED,BLUE,phase)});
  }else if(s.id==='iron'){
   fill(p.sky,0,400,1080,1700);for(let k=0;k<8;k++)fill(p.band,0,550+k*26,1080,4+k);
   const z=lerp(.85,1.02,smooth(u/6));g.save();g.translate(540,940);g.scale(z,z);g.rotate(-.14);
@@ -66,9 +61,9 @@ function drawScene(i,t){const s=TL.scenes[i],u=t-s.start;let p=s.id==='cold'?pal
  }else if(['height','cold'].includes(s.id)){
   const cold=s.id==='cold';city(p,t);const e=cold?1-smooth(u/3):smooth(u/4),h=650+e*65;
   tower(480,1272,650,p.far);tower(480,1272,h,NAVY,{lit:cold?BLUE:RED});
-  rule(160,1272,760,NAVY,3);const top=1272-h;rule(865,top,3,NAVY,1272-top);rule(850,top,30,RED,5);rule(850,1272,30,NAVY,5);sun(790,650,47,cold?BLUE:GOLD);
+  rule(160,1272,760,NAVY,3);const top=1272-h;rule(865,top,3,NAVY,1272-top);rule(850,top,30,RED,5);rule(850,1272,30,NAVY,5);sun(790,650,47,cold?mixColor(GOLD,BLUE,smooth(u/.8)):GOLD);
  }else if(s.id==='turn'){
-  city(p,t);tower(510,1350,800,NAVY,{lit:RED});sun(lerp(1150,820,smooth(u/2.4)),700,70,GOLD);
+  city(p,t);tower(480,1272,650,NAVY,{lit:RED});sun(lerp(1150,820,smooth(u/2.4)),700,70,GOLD);
  }else if(s.id==='uneven'){
   fill(p.sky,0,400,1080,1700);sun(858,645,66,GOLD);const grow=smooth((u-2)/3)*95;
   fill(BLUE,280,720,85,450);fill(NAVY,277,1166,92,6);fill(RED,650,720-grow,85,450+grow);fill(GOLD,650,720-grow,17,450+grow);
@@ -85,13 +80,16 @@ function drawScene(i,t){const s=TL.scenes[i],u=t-s.start;let p=s.id==='cold'?pal
  g.restore();inkFinish(g,T,0,0,W,H,.6,.45);
 }
 function subtitles(t){const q=TL.cues.find(q=>t>=q.t0&&t<q.t1);if(!q)return;g.save();
- g.clip(wipeRegion([78,1442,924,180],'right',seg(t,q.t0,q.t0+.12),18,10));
+ // Captions stay locked to the screen; no sliding text reveals.
  fill('rgba(16,32,44,.93)',78,1442,924,180);
  text(q.fa,540,1495,44,PAPER,'fa',700,'center',860);text(q.en,540,1569,31,PAPER,'en',400,'center',856);g.restore()}
-const scratch=document.createElement('canvas'),fresh=document.createElement('canvas');for(const el of [scratch,fresh]){el.width=W;el.height=H}const sg=scratch.getContext('2d'),fg=fresh.getContext('2d');
-window.render=t=>{t=clamp(t,0,TL.duration-.00001);let i=TL.scenes.findIndex(s=>t>=s.start&&t<s.end);if(i<0)i=TL.scenes.length-1;const u=t-TL.scenes[i].start;
- if(i>0&&u<.42){drawScene(i-1,TL.scenes[i].start-.001);sg.drawImage(c,0,0);drawScene(i,t);fg.drawImage(c,0,0);g.drawImage(scratch,0,0);g.save();g.clip(wipeRegion([0,0,W,H],'right',u/.42,17,30));g.drawImage(fresh,0,0);g.restore();const x=-30+u/.42*(W+60);g.save();squeegee(g,[x,-40],[x,H+40],[1,0],{color:TL.scenes[i].id==='cold'?BLUE:RED,handle:0,scale:1});g.restore();
- }else drawScene(i,t);subtitles(t)};
+window.render=t=>{
+ t=clamp(t,0,TL.duration-.00001);let i=TL.scenes.findIndex(s=>t>=s.start&&t<s.end);if(i<0)i=TL.scenes.length-1;
+ const cam=cameraAt(t,TL.scenes);
+ g.save();g.translate(W/2,H/2);g.rotate(cam.roll);g.scale(cam.zoom,cam.zoom);g.translate(-cam.x,-cam.y);
+ drawScene(i,t);g.restore();subtitles(t);
+};
+window.cameraAt=t=>cameraAt(t,TL.scenes);
 window.DUR=TL.duration;window.TL=TL;window.READY=true;window.render(0);
 if(new URLSearchParams(location.search).has('render'))document.documentElement.classList.add('render');
 const audio=document.getElementById('audio'),seek=document.getElementById('seek'),clock=document.getElementById('clock'),btn=document.getElementById('play');

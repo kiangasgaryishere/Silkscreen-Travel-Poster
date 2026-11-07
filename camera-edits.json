@@ -1,0 +1,74 @@
+[
+  {
+    "time": 5.65,
+    "kind": "Lattice match cut",
+    "out": "Push toward tower brace",
+    "in": "Close structural lattice, pull back"
+  },
+  {
+    "time": 12.02,
+    "kind": "Material match cut",
+    "out": "Push into iron joint",
+    "in": "Iron bar, settle into explanation"
+  },
+  {
+    "time": 17.53,
+    "kind": "Continuous insert",
+    "out": "Hold bar comparison",
+    "in": "Same bar, gradual detail push"
+  },
+  {
+    "time": 21.21,
+    "kind": "Scale reveal",
+    "out": "Close view of expanded iron",
+    "in": "Pull back to tower elevation"
+  },
+  {
+    "time": 27.02,
+    "kind": "Continuous seasonal grade",
+    "out": "Warm tower at matched height",
+    "in": "Same elevation cools without a spatial wipe"
+  },
+  {
+    "time": 32.1,
+    "kind": "Matched tower cut",
+    "out": "Stable cool elevation",
+    "in": "Stable warm elevation, push toward sun"
+  },
+  {
+    "time": 35.19,
+    "kind": "Sun match cut",
+    "out": "Push toward sun",
+    "in": "Sunlit material, pull back to two sides"
+  },
+  {
+    "time": 41.93,
+    "kind": "Warm-side match cut",
+    "out": "Close warm structural strip",
+    "in": "Tower silhouette reveals direction"
+  },
+  {
+    "time": 48.42,
+    "kind": "Continuous sun follow",
+    "out": "Bend away from right-hand sun",
+    "in": "Same diagram follows moving sun"
+  },
+  {
+    "time": 52.12,
+    "kind": "Scale match cut",
+    "out": "Release diagram camera",
+    "in": "Pull back to visitors and stable tower"
+  },
+  {
+    "time": 61.35,
+    "kind": "Landmark match cut",
+    "out": "Visitor-scale elevation",
+    "in": "Same landmark, gentle closing push"
+  },
+  {
+    "time": 66.87,
+    "kind": "Unbroken closing shot",
+    "out": "Seasonal palette changes",
+    "in": "Camera settles on final question"
+  }
+]

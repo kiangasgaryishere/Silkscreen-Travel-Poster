@@ -47,7 +47,7 @@ scenes=[
 (52.12,61.35,'human','اون‌قدر کم که نمی‌بینی','TOO SMALL TO NOTICE','Wide / slight low-angle illustration','Gentle pullback to visitors for scale','Perfectly stable tower, small visitors, park and river. No dramatic bending.','Restrained city-like air, paper steps'),
 (61.35,66.87,'return','ثابت به نظر میاد','IT ONLY LOOKS STILL','Full / front elevation','Slow push into same opening geometry','Warm/cold ink sweep revisits opening with labels expansion and contraction.','Two soft print pulls'),
 (66.87,71.621541667,'end','تو چی فکر می‌کردی؟','DID YOU KNOW?','Full / matched front elevation','Settle and hold','Same tower with warm/cold halves; end on the viewer question, no logo.','Paper-settle tick, ambience tails within original duration')]
-ss=[dict(start=a,end=b,duration=b-a,id=id,title=title,enTitle=en,shot=shot,camera=cam,action=act,sfx=sfx,music='None',transition='Motivated ink-pull wipe',subject='No people except stable scale silhouettes in human shot',lens='Virtual orthographic / compressed perspective',depth_of_field='Deep focus; depth by value and overlap',focus='Causal graphic / tower silhouette',lighting='Flat ink light from sun side',composition='Subject central; captions below illustration') for a,b,id,title,en,shot,cam,act,sfx in scenes]
+ss=[dict(start=a,end=b,duration=b-a,id=id,title=title,enTitle=en,shot=shot,camera=cam,action=act,sfx=sfx,music='None',transition='Camera match cut / continuous shot',subject='No people except stable scale silhouettes in human shot',lens='Virtual orthographic / compressed perspective',depth_of_field='Deep focus; depth by value and overlap',focus='Causal graphic / tower silhouette',lighting='Flat ink light from sun side',composition='Subject central; captions below illustration') for a,b,id,title,en,shot,cam,act,sfx in scenes]
 # Revision: full-bleed animation, with narration subtitles as the only text.
 for shot in ss:
  shot.pop('title',None);shot.pop('enTitle',None)
@@ -55,10 +55,17 @@ for shot in ss:
  shot['composition']='Full-bleed illustration; subtitles overlay y=1442–1622'
  shot['action']=shot['action'].replace('explicitly labelled schematic','as an illustrative comparison').replace('labelled','illustrative')
  if shot['id']=='summer-winter':
-  shot['camera']='Macro lattice view → rapid pullback (0–1.15s), winter ink wipe (2.12–2.65s), seasonal split (3.45–4.10s)'
-  shot['action']='One original tower silhouette is revealed from close range; warm ink becomes cold at the winter narration, then settles into a warm/cold split. No dramatic size change or text labels.'
+  shot['camera']='Macro lattice reveal → pullback (0–1.15s), whole-scene seasonal palette change (2.12–2.65s), push into structural detail before 5.65s'
+  shot['action']='One tower is revealed from close range; its palette cools at winter narration. The camera then approaches the structure for a lattice match cut. No moving panels, dramatic size change or text labels.'
  if shot['id'] in ['return','end']:
-  shot['action']='One full-height tower, split between warm and cold inks, echoes the opening. No headings, labels, counters or footer.'
+  shot['action']='One full-height tower echoes the opening. Whole-scene palette changes while a continuous camera settles on the final question; no split panel or extra text.'
+edits=json.load(open(D/'camera-edits.json'))
+for shot in ss:
+ edit=next((e for e in edits if abs(e['time']-shot['start'])<.001),None)
+ if edit:
+  shot['transition']=edit['kind']
+  shot['camera']=edit['in']+'; camera.js owns the exact time-keyed track'
+ shot['sfx']='Sparse quiet air / material ticks; no repeating blade scrape and no music'
 json.dump({'duration':1718917/24000,'scenes':ss,'cues':cues},open(D/'timeline.json','w'),ensure_ascii=False,indent=2)
 def stamp(t):
  ms=round(t*1000);return f'{ms//3600000:02}:{ms//60000%60:02}:{ms//1000%60:02},{ms%1000:03}'
@@ -66,7 +73,7 @@ for lang in ['fa','en','bilingual']:
  text='\n\n'.join(f'{i+1}\n{stamp(c["t0"])} --> {stamp(c["t1"])}\n'+(c['fa']+'\n'+c['en'] if lang=='bilingual' else c[lang]) for i,c in enumerate(cues))+'\n'
  (D/f'eiffel.{lang}.srt').write_text(text)
 with open(D/'SHOTLIST.md','w') as f:
- f.write('# Audio-led shot timeline\n\nNo music in any shot. Original recording duration: 71.621541667 s. All timing below is in seconds. Each graphic enters with a 0.42 s ink pull; it exits with the next shot’s motivated ink wipe. Captions have individual exact cue times in timeline.json and the SRT files.\n\n')
+ f.write('# Audio-led shot timeline\n\nNo music in any shot. Original recording duration: 71.621541667 s. All timing below is in seconds. Cuts are motivated by camera movement and matching subject geometry. Related diagrams retain a continuous camera. No slide or ink-wipe transition is used. Exact camera keyframes are in camera.js; editorial connections are in camera-edits.json. Captions have individual exact cue times in timeline.json and the SRT files.\n\n')
  for i,s in enumerate(ss):
   f.write(f'## {i+1}. {s["start"]:.3f}–{s["end"]:.3f} ({s["duration"]:.3f} s): {s["id"]}\n\n')
   for k in ['shot','camera','lens','depth_of_field','focus','subject','lighting','composition','action','sfx','music','transition']:f.write(f'- {k}: {s[k]}\n')

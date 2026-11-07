@@ -1,21 +1,21 @@
 # Audio-led shot timeline
 
-No music in any shot. Original recording duration: 71.621541667 s. All timing below is in seconds. Each graphic enters with a 0.42 s ink pull; it exits with the next shot’s motivated ink wipe. Captions have individual exact cue times in timeline.json and the SRT files.
+No music in any shot. Original recording duration: 71.621541667 s. All timing below is in seconds. Cuts are motivated by camera movement and matching subject geometry. Related diagrams retain a continuous camera. No slide or ink-wipe transition is used. Exact camera keyframes are in camera.js; editorial connections are in camera-edits.json. Captions have individual exact cue times in timeline.json and the SRT files.
 
 ## 1. 0.000–5.650 (5.650 s): summer-winter
 
 - shot: Full / front elevation / matched comparison
-- camera: Macro lattice view → rapid pullback (0–1.15s), winter ink wipe (2.12–2.65s), seasonal split (3.45–4.10s)
+- camera: Macro lattice reveal → pullback (0–1.15s), whole-scene seasonal palette change (2.12–2.65s), push into structural detail before 5.65s
 - lens: Virtual orthographic / compressed perspective
 - depth_of_field: Deep focus; depth by value and overlap
 - focus: Causal graphic / tower silhouette
 - subject: No people except stable scale silhouettes in human shot
 - lighting: Flat ink light from sun side
 - composition: Full-bleed illustration; subtitles overlay y=1442–1622
-- action: One original tower silhouette is revealed from close range; warm ink becomes cold at the winter narration, then settles into a warm/cold split. No dramatic size change or text labels.
-- sfx: Two short paper stamps
+- action: One tower is revealed from close range; its palette cools at winter narration. The camera then approaches the structure for a lattice match cut. No moving panels, dramatic size change or text labels.
+- sfx: Sparse quiet air / material ticks; no repeating blade scrape and no music
 - music: None
-- transition: Motivated ink-pull wipe
+- transition: Camera match cut / continuous shot
 - On-screen text: Persian and English narration subtitles only.
 - Narration / captions:
   - 0.310–2.150: برج ایفل تابستونا بلندتره، / The Eiffel Tower is taller in summer.
@@ -25,7 +25,7 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 ## 2. 5.650–12.020 (6.370 s): iron
 
 - shot: Close-up / orthographic oblique material insert
-- camera: Push through lattice, then lateral slide
+- camera: Close structural lattice, pull back; camera.js owns the exact time-keyed track
 - lens: Virtual orthographic / compressed perspective
 - depth_of_field: Deep focus; depth by value and overlap
 - focus: Causal graphic / tower silhouette
@@ -33,9 +33,9 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - lighting: Flat ink light from sun side
 - composition: Full-bleed illustration; subtitles overlay y=1442–1622
 - action: A brace fills the frame; rivets and adjacent bracing reveal iron structure.
-- sfx: Mesh scrape, low metal tap
+- sfx: Sparse quiet air / material ticks; no repeating blade scrape and no music
 - music: None
-- transition: Motivated ink-pull wipe
+- transition: Lattice match cut
 - On-screen text: Persian and English narration subtitles only.
 - Narration / captions:
   - 5.650–8.250: برای فهمیدنش، باید از نمای معروف برج فاصله بگیریم / To understand why, look beyond the landmark
@@ -44,7 +44,7 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 ## 3. 12.020–17.530 (5.510 s): bar
 
 - shot: Insert / top-down orthographic
-- camera: Locked for legible comparison
+- camera: Iron bar, settle into explanation; camera.js owns the exact time-keyed track
 - lens: Virtual orthographic / compressed perspective
 - depth_of_field: Deep focus; depth by value and overlap
 - focus: Causal graphic / tower silhouette
@@ -52,9 +52,9 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - lighting: Flat ink light from sun side
 - composition: Full-bleed illustration; subtitles overlay y=1442–1622
 - action: Sun warms an iron bar; the bar extends against an original-length ghost.
-- sfx: Dry ink drag synchronized to growth
+- sfx: Sparse quiet air / material ticks; no repeating blade scrape and no music
 - music: None
-- transition: Motivated ink-pull wipe
+- transition: Material match cut
 - On-screen text: Persian and English narration subtitles only.
 - Narration / captions:
   - 12.020–15.300: وقتی آهن گرم می‌شه، یه‌کم منبسط می‌شه؛ / When iron heats up, it expands a little.
@@ -63,7 +63,7 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 ## 4. 17.530–21.210 (3.680 s): small
 
 - shot: Macro / top-down
-- camera: Pull back from bar to a pair of beams
+- camera: Same bar, gradual detail push; camera.js owns the exact time-keyed track
 - lens: Virtual orthographic / compressed perspective
 - depth_of_field: Deep focus; depth by value and overlap
 - focus: Causal graphic / tower silhouette
@@ -71,9 +71,9 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - lighting: Flat ink light from sun side
 - composition: Full-bleed illustration; subtitles overlay y=1442–1622
 - action: Show subtle actual-scale bar, then an enlarged comparison as an illustrative comparison.
-- sfx: Paper tick
+- sfx: Sparse quiet air / material ticks; no repeating blade scrape and no music
 - music: None
-- transition: Motivated ink-pull wipe
+- transition: Continuous insert
 - On-screen text: Persian and English narration subtitles only.
 - Narration / captions:
   - 17.530–19.100: این تغییر توی یه تکه آهن کوچیک، / In a small piece of iron,
@@ -82,7 +82,7 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 ## 5. 21.210–27.020 (5.810 s): height
 
 - shot: Full / front elevation
-- camera: Slow vertical crane preserving baseline
+- camera: Pull back to tower elevation; camera.js owns the exact time-keyed track
 - lens: Virtual orthographic / compressed perspective
 - depth_of_field: Deep focus; depth by value and overlap
 - focus: Causal graphic / tower silhouette
@@ -90,9 +90,9 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - lighting: Flat ink light from sun side
 - composition: Full-bleed illustration; subtitles overlay y=1442–1622
 - action: Tower schematic grows slightly against a paper baseline and height marker.
-- sfx: Scrape as marker rises
+- sfx: Sparse quiet air / material ticks; no repeating blade scrape and no music
 - music: None
-- transition: Motivated ink-pull wipe
+- transition: Scale reveal
 - On-screen text: Persian and English narration subtitles only.
 - Narration / captions:
   - 21.210–23.400: اما اسکلت برج ایفل هم / But the Eiffel Tower’s structure
@@ -102,7 +102,7 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 ## 6. 27.020–32.100 (5.080 s): cold
 
 - shot: Full / same matched elevation
-- camera: Lock baseline, small pullback
+- camera: Same elevation cools without a spatial wipe; camera.js owns the exact time-keyed track
 - lens: Virtual orthographic / compressed perspective
 - depth_of_field: Deep focus; depth by value and overlap
 - focus: Causal graphic / tower silhouette
@@ -110,9 +110,9 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - lighting: Flat ink light from sun side
 - composition: Full-bleed illustration; subtitles overlay y=1442–1622
 - action: Cold palette re-inks tower; exaggerated schematic height returns.
-- sfx: Short re-ink sweep
+- sfx: Sparse quiet air / material ticks; no repeating blade scrape and no music
 - music: None
-- transition: Motivated ink-pull wipe
+- transition: Continuous seasonal grade
 - On-screen text: Persian and English narration subtitles only.
 - Narration / captions:
   - 27.020–29.950: هوا که سرد بشه، آهن منقبض می‌شه / When it gets cold, the iron contracts.
@@ -121,7 +121,7 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 ## 7. 32.100–35.190 (3.090 s): turn
 
 - shot: Full / front elevation
-- camera: Suspended slow push
+- camera: Stable warm elevation, push toward sun; camera.js owns the exact time-keyed track
 - lens: Virtual orthographic / compressed perspective
 - depth_of_field: Deep focus; depth by value and overlap
 - focus: Causal graphic / tower silhouette
@@ -129,9 +129,9 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - lighting: Flat ink light from sun side
 - composition: Full-bleed illustration; subtitles overlay y=1442–1622
 - action: Stable tower; lone sun enters upper right; room for curiosity.
-- sfx: Near-silence in foley and ambience
+- sfx: Sparse quiet air / material ticks; no repeating blade scrape and no music
 - music: None
-- transition: Motivated ink-pull wipe
+- transition: Matched tower cut
 - On-screen text: Persian and English narration subtitles only.
 - Narration / captions:
   - 32.100–35.050: ولی داستان فقط بالا و پایین رفتن نیست… / But there’s more than an up-and-down change…
@@ -139,7 +139,7 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 ## 8. 35.190–41.930 (6.740 s): uneven
 
 - shot: Medium / orthographic diagram
-- camera: Push toward two parallel structural strips
+- camera: Sunlit material, pull back to two sides; camera.js owns the exact time-keyed track
 - lens: Virtual orthographic / compressed perspective
 - depth_of_field: Deep focus; depth by value and overlap
 - focus: Causal graphic / tower silhouette
@@ -147,9 +147,9 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - lighting: Flat ink light from sun side
 - composition: Full-bleed illustration; subtitles overlay y=1442–1622
 - action: Sunlit side warms and lengthens; shaded side stays cool. No numerical scale.
-- sfx: Two ink pulls, soft clamp
+- sfx: Sparse quiet air / material ticks; no repeating blade scrape and no music
 - music: None
-- transition: Motivated ink-pull wipe
+- transition: Sun match cut
 - On-screen text: Persian and English narration subtitles only.
 - Narration / captions:
   - 35.190–38.350: خورشید همه طرف برج رو یکسان گرم نمی‌کنه. / The sun doesn’t heat every side equally.
@@ -159,7 +159,7 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 ## 9. 41.930–48.420 (6.490 s): bend
 
 - shot: Full / schematic front elevation
-- camera: Locked framing for causal direction
+- camera: Tower silhouette reveals direction; camera.js owns the exact time-keyed track
 - lens: Virtual orthographic / compressed perspective
 - depth_of_field: Deep focus; depth by value and overlap
 - focus: Causal graphic / tower silhouette
@@ -167,9 +167,9 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - lighting: Flat ink light from sun side
 - composition: Full-bleed illustration; subtitles overlay y=1442–1622
 - action: Right-side sun; tower schematic bends left, with directional arrow.
-- sfx: Clamp on result, soft directional scrape
+- sfx: Sparse quiet air / material ticks; no repeating blade scrape and no music
 - music: None
-- transition: Motivated ink-pull wipe
+- transition: Warm-side match cut
 - On-screen text: Persian and English narration subtitles only.
 - Narration / captions:
   - 41.930–42.900: نتیجه؟ / The result?
@@ -179,7 +179,7 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 ## 10. 48.420–52.120 (3.700 s): sun
 
 - shot: Full / front schematic
-- camera: Lateral truck following sun
+- camera: Same diagram follows moving sun; camera.js owns the exact time-keyed track
 - lens: Virtual orthographic / compressed perspective
 - depth_of_field: Deep focus; depth by value and overlap
 - focus: Causal graphic / tower silhouette
@@ -187,9 +187,9 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - lighting: Flat ink light from sun side
 - composition: Full-bleed illustration; subtitles overlay y=1442–1622
 - action: Sun moves right to left; bend changes left to right.
-- sfx: Soft wind leads next shot
+- sfx: Sparse quiet air / material ticks; no repeating blade scrape and no music
 - music: None
-- transition: Motivated ink-pull wipe
+- transition: Continuous sun follow
 - On-screen text: Persian and English narration subtitles only.
 - Narration / captions:
   - 48.420–51.950: با جابه‌جا شدن خورشید، جهت این تغییر هم عوض می‌شه. / As the sun moves, the direction changes too.
@@ -197,7 +197,7 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 ## 11. 52.120–61.350 (9.230 s): human
 
 - shot: Wide / slight low-angle illustration
-- camera: Gentle pullback to visitors for scale
+- camera: Pull back to visitors and stable tower; camera.js owns the exact time-keyed track
 - lens: Virtual orthographic / compressed perspective
 - depth_of_field: Deep focus; depth by value and overlap
 - focus: Causal graphic / tower silhouette
@@ -205,9 +205,9 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - lighting: Flat ink light from sun side
 - composition: Full-bleed illustration; subtitles overlay y=1442–1622
 - action: Perfectly stable tower, small visitors, park and river. No dramatic bending.
-- sfx: Restrained city-like air, paper steps
+- sfx: Sparse quiet air / material ticks; no repeating blade scrape and no music
 - music: None
-- transition: Motivated ink-pull wipe
+- transition: Scale match cut
 - On-screen text: Persian and English narration subtitles only.
 - Narration / captions:
   - 52.120–54.100: البته این حرکت اون‌قدر کوچیکه / But this movement is so small
@@ -218,17 +218,17 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 ## 12. 61.350–66.870 (5.520 s): return
 
 - shot: Full / front elevation
-- camera: Slow push into same opening geometry
+- camera: Same landmark, gentle closing push; camera.js owns the exact time-keyed track
 - lens: Virtual orthographic / compressed perspective
 - depth_of_field: Deep focus; depth by value and overlap
 - focus: Causal graphic / tower silhouette
 - subject: No people except stable scale silhouettes in human shot
 - lighting: Flat ink light from sun side
 - composition: Full-bleed illustration; subtitles overlay y=1442–1622
-- action: One full-height tower, split between warm and cold inks, echoes the opening. No headings, labels, counters or footer.
-- sfx: Two soft print pulls
+- action: One full-height tower echoes the opening. Whole-scene palette changes while a continuous camera settles on the final question; no split panel or extra text.
+- sfx: Sparse quiet air / material ticks; no repeating blade scrape and no music
 - music: None
-- transition: Motivated ink-pull wipe
+- transition: Landmark match cut
 - On-screen text: Persian and English narration subtitles only.
 - Narration / captions:
   - 61.350–64.000: پس اون برجی که توی عکس‌ها کاملاً ثابت به نظر میاد، / So the tower that looks perfectly still in photos
@@ -237,17 +237,17 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 ## 13. 66.870–71.622 (4.752 s): end
 
 - shot: Full / matched front elevation
-- camera: Settle and hold
+- camera: Camera settles on final question; camera.js owns the exact time-keyed track
 - lens: Virtual orthographic / compressed perspective
 - depth_of_field: Deep focus; depth by value and overlap
 - focus: Causal graphic / tower silhouette
 - subject: No people except stable scale silhouettes in human shot
 - lighting: Flat ink light from sun side
 - composition: Full-bleed illustration; subtitles overlay y=1442–1622
-- action: One full-height tower, split between warm and cold inks, echoes the opening. No headings, labels, counters or footer.
-- sfx: Paper-settle tick, ambience tails within original duration
+- action: One full-height tower echoes the opening. Whole-scene palette changes while a continuous camera settles on the final question; no split panel or extra text.
+- sfx: Sparse quiet air / material ticks; no repeating blade scrape and no music
 - music: None
-- transition: Motivated ink-pull wipe
+- transition: Unbroken closing shot
 - On-screen text: Persian and English narration subtitles only.
 - Narration / captions:
   - 66.870–68.550: قبل از این ویدئو، فکر می‌کردی / Before this video, did you think

@@ -2,7 +2,7 @@
 
 Minimal full-bleed vertical silkscreen educational Reel, Persian narration with Persian/English captions. No background music. The supplied audio determines the exact 71.621541667-second timeline.
 
-The current revision removes all headings, labels, counters, corner text and footers. Only the bilingual narration captions are drawn. The new opening reveals a large tower from a lattice close-up and prints a warm/cold seasonal change across it.
+The current revision removes all headings, labels, counters, corner text and footers. Only the bilingual narration captions are drawn. The opening reveals a large tower from a lattice close-up. Whole-scene seasonal colours, camera moves and matched cuts replace all spatial wipes and sliding transitions.
 
 ## Files
 
@@ -11,6 +11,7 @@ The current revision removes all headings, labels, counters, corner text and foo
 - `timeline.json`: shot and caption timeline.
 - `TREATMENT.md`, `SHOTLIST.md`: editorial treatment and precise shot direction.
 - `CREDITS`, `engine/LICENSE`, `assets/licenses/`: asset sources and licences.
+- `camera.js`, `camera-edits.json`: time-keyed camera tracks and editorial connections.
 - `film.js`, `engine/silk.js`: deterministic Canvas illustration/animation.
 - `assets/narration.wav`: original supplied recording.
 
