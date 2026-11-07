@@ -48,6 +48,17 @@ scenes=[
 (61.35,66.87,'return','ثابت به نظر میاد','IT ONLY LOOKS STILL','Full / front elevation','Slow push into same opening geometry','Warm/cold ink sweep revisits opening with labels expansion and contraction.','Two soft print pulls'),
 (66.87,71.621541667,'end','تو چی فکر می‌کردی؟','DID YOU KNOW?','Full / matched front elevation','Settle and hold','Same tower with warm/cold halves; end on the viewer question, no logo.','Paper-settle tick, ambience tails within original duration')]
 ss=[dict(start=a,end=b,duration=b-a,id=id,title=title,enTitle=en,shot=shot,camera=cam,action=act,sfx=sfx,music='None',transition='Motivated ink-pull wipe',subject='No people except stable scale silhouettes in human shot',lens='Virtual orthographic / compressed perspective',depth_of_field='Deep focus; depth by value and overlap',focus='Causal graphic / tower silhouette',lighting='Flat ink light from sun side',composition='Subject central; captions below illustration') for a,b,id,title,en,shot,cam,act,sfx in scenes]
+# Revision: full-bleed animation, with narration subtitles as the only text.
+for shot in ss:
+ shot.pop('title',None);shot.pop('enTitle',None)
+ shot['on_screen_text']='Persian and English narration subtitles only'
+ shot['composition']='Full-bleed illustration; subtitles overlay y=1442–1622'
+ shot['action']=shot['action'].replace('explicitly labelled schematic','as an illustrative comparison').replace('labelled','illustrative')
+ if shot['id']=='summer-winter':
+  shot['camera']='Macro lattice view → rapid pullback (0–1.15s), winter ink wipe (2.12–2.65s), seasonal split (3.45–4.10s)'
+  shot['action']='One original tower silhouette is revealed from close range; warm ink becomes cold at the winter narration, then settles into a warm/cold split. No dramatic size change or text labels.'
+ if shot['id'] in ['return','end']:
+  shot['action']='One full-height tower, split between warm and cold inks, echoes the opening. No headings, labels, counters or footer.'
 json.dump({'duration':1718917/24000,'scenes':ss,'cues':cues},open(D/'timeline.json','w'),ensure_ascii=False,indent=2)
 def stamp(t):
  ms=round(t*1000);return f'{ms//3600000:02}:{ms//60000%60:02}:{ms//1000%60:02},{ms%1000:03}'
@@ -59,7 +70,7 @@ with open(D/'SHOTLIST.md','w') as f:
  for i,s in enumerate(ss):
   f.write(f'## {i+1}. {s["start"]:.3f}–{s["end"]:.3f} ({s["duration"]:.3f} s): {s["id"]}\n\n')
   for k in ['shot','camera','lens','depth_of_field','focus','subject','lighting','composition','action','sfx','music','transition']:f.write(f'- {k}: {s[k]}\n')
-  f.write('- On-screen title: '+s['title']+' / '+s['enTitle']+'\n- Narration / captions:\n')
+  f.write('- On-screen text: Persian and English narration subtitles only.\n- Narration / captions:\n')
   for c in cues:
    if s['start']<=c['t0']<s['end']:f.write(f'  - {c["t0"]:.3f}–{c["t1"]:.3f}: {c["fa"]} / {c["en"]}\n')
   f.write('\n')

@@ -1,30 +1,31 @@
 # The tower that responds / برجی که واکنش نشان می‌دهد
 
+## Current cut: minimal, full bleed
+The user's revision removes every heading, number, corner label, diagram label and footer. Only Persian/English narration subtitles remain. The artwork fills all 1080×1920 pixels; there is no cream page border or editorial header/footer. Paper grain survives as a subtle ink material, not a blank background.
+
+## Opening hook (0–5.65 seconds)
+0–0.42: a quick squeegee gesture over a close view of the tower's structure.
+0–1.15: a fast, smooth pullback from the iron lattice reveals one large Eiffel Tower, with a warm sun and terracotta ink.
+2.12–2.65: a cold ink pull transforms the same geometry as the voice reaches winter.
+3.45–4.10: the winter ink settles into a warm/cold split across the same tower; hold through the opening question.
+No seasonal words, title, added facts or exaggerated height claim appear in this hook.
+
 ## Brief and precedence
-A Persian educational Reel, precisely the length of the supplied recording (1,718,917 samples at 24 kHz: 71.621541667 seconds). Original narration is neither stretched nor rewritten. Persian and English captions. No music, including at transitions. No logos, stock images or generated footage. Attached direction is production reference: its approximate 85-second timing and musical suggestions yield to the user's recording and no-music requirement. Photographic views become original screen-print illustrations. Dramatic deformation is confined to labelled schematic views.
+Original supplied narration, at original speed. Exact duration 1,718,917 / 24,000 = 71.621541667 seconds. No music. No logos, stock footage or external images. English subtitles translate the supplied Persian script. The user's latest request supersedes the attached direction's separate on-screen text and schematic labels, as well as the original poster-like layout. The direction's music and approximate 85-second schedule also yield to the explicit request.
 
-## Structures considered
-1. Seasonal comparison → iron close-up → expansion → differential heating → everyday scale. Chosen: matches the recorded explanation and pays off the opening comparison.
-2. Follow a sun across one day: elegant but puts the bending reveal ahead of the recording.
-3. A laboratory experiment alone: clear but loses the Eiffel Tower as the visual anchor.
+## Story and structure
+Seasonal visual question → structural iron → bar expansion → tower height → cold contraction → second reveal → asymmetric heating → bending away from sunlight → human scale → return to the opening image with new understanding.
 
-## Story
-An apparently immovable landmark responds to heat. Opening: a warm/cold split print of the same Eiffel Tower. Follow the structural material to understand expansion. Return to the landmark, reveal asymmetric heating and tiny movement away from sunlight, then return to the opening composition with new understanding. Learning goal: distinguish uniform thermal expansion from differential expansion.
+Alternatives considered: a day-long sun journey would put the second reveal ahead of the recorded narration; a laboratory-only film would lose the landmark anchor. The chosen causal progression follows the recording and varies framing between full tower, structural close-up and isolated mechanism diagrams.
 
-## Benchmark
-WPA travel prints: learn flat value-separated planes and assertive negative space, copy no composition or lettering. Physical screen printing: steady ink pulls, small registration offsets, paper-white knockouts. Library demo is a technical reference only; this film has original illustrations, seasonal opener, explanatory structure, materials close-ups and a music-free speech-led rhythm.
+## Look and camera
+Full-bleed opaque flat inks, hard edges, stepped skies, subtle registration and paper texture. Cream as an occasional material knockout, not a frame. Camera attention is carried by the large silhouette, ink changes and diagram motion. No decorative text. No numerical diagram scales. Qualitative diagram deformation is stylized and exaggerated; landmark/visitor views remain stable. Lighting direction and bending away from the sun remain consistent.
 
-## Direction
-9:16, 1080×1920. Main illustrations occupy y=430–1320; titles above; bilingual captions y=1400–1590, avoiding bottom and right-side controls. Persian 40–46 px, English 29–33 px. Persian above English, one line each per cue. Important terminology highlighted by a short accent rule rather than noisy word-by-word animation. Correct browser RTL shaping. No gradients or dissolves. Ink sweeps motivate scene changes. Warm cream, terracotta, ochre and deep navy; cold variants replace terracotta with slate blue. Camera always stays inside the print.
-
-## Camera and movement
-Front elevation for honest height comparison; top-down material insert; 2.5D parallax push through structural braces; locked diagram for causal explanation; lateral sun movement for asymmetric heating; slow full-view pullback for scale and ending. Virtual orthographic / long-lens character, deep focus, attention directed by ink contrast rather than bokeh. Lighting is represented by flat lit faces from the sun's side. No random shake. Shapes use filled polygons, including lattice braces. Repeated tower geometry preserves continuity.
+## Subtitles
+Persian above English, one line each, in a restrained dark overlay at y=1442–1622. Persian 34–44 px with correct RTL shaping; English 31 px. Original phrase timings retained. During silent gaps, there is no text. No added emphasis words or labels.
 
 ## Sound
-Original narration dominant. Dry screen scrapes, paper ticks and a muted clamp at explanatory reveals; subtle procedural wind and city-like room tone. Near-silence in non-voice stems before the second reveal. No melodic, tonal or musical bed. Foley never simulates the physical tower creaking or snapping.
+Original voice remains dominant, with quiet non-musical print scrapes, paper ticks, muted clamps and environmental air. No new sound or voice is introduced for this revision. The final video track is trimmed at source-sample precision to end with the unchanged recording.
 
-## Timing
-The final shot/caption timeline is recorded in timeline.json and SHOTLIST.md after speech analysis. Each row includes exact start/end, framing, movement, visual progression, narration cues, transition, graphic and sound. Audio recording determines all cue placement; no 85-second padding.
-
-## Scientific presentation
-No invented numerical change, temperature, formula or scale. All visibly stretched or bent tower diagrams are labelled in both languages as exaggerated schematic illustrations. A real tower view remains stable. Differential heating bends the schematic away from the warmer side. Learning content comes from the supplied script; no claim of independent historical fact verification.
+## Source of timing and direction
+`timeline.json` and `SHOTLIST.md` specify scene and subtitle timing. `film.js` owns the actual graphic actions and full-bleed camera. The first cut remains available in Git history; local render intermediates are ignored.

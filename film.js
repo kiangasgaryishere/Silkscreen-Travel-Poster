@@ -7,13 +7,11 @@ const palettes={warm:{sky:'#EDCD9E',band:'#DF9A68',far:'#B67F65',mid:'#577976',n
 function fill(col,x,y,w,h){g.fillStyle=col;g.fillRect(x,y,w,h)}
 function poly(pts,col){g.fillStyle=col;g.beginPath();pts.forEach(([x,y],i)=>i?g.lineTo(x,y):g.moveTo(x,y));g.closePath();g.fill()}
 function circle(x,y,r,col){g.fillStyle=col;g.beginPath();g.arc(x,y,r,0,7);g.fill()}
-function beam(x1,y1,x2,y2,w,col){let d=Math.hypot(x2-x1,y2-y1),nx=(y1-y2)/d*w/2,ny=(x2-x1)/d*w/2;poly([[x1+nx,y1+ny],[x2+nx,y2+ny],[x2-nx,y2-ny],[x1-nx,y1-ny]],col)}
+function beam(x1,y1,x2,y2,w,col){let d=Math.max(.001,Math.hypot(x2-x1,y2-y1)),nx=(y1-y2)/d*w/2,ny=(x2-x1)/d*w/2;poly([[x1+nx,y1+ny],[x2+nx,y2+ny],[x2-nx,y2-ny],[x1-nx,y1-ny]],col)}
 function text(s,x,y,size=44,col=NAVY,lang='fa',weight=700,align='center',max=900){g.save();g.direction=lang==='fa'?'rtl':'ltr';g.textAlign=align;g.textBaseline='middle';g.fillStyle=col;let fs=size;do{g.font=`${weight} ${fs}px ${lang==='fa'?'Persian':'English'}`;if(g.measureText(s).width<=max)break;fs--}while(fs>20);g.fillText(s,x,y);g.restore()}
 function rule(x,y,w,col=NAVY,h=3){fill(col,x,y,w,h)}
-function label(fa,en,x,y,sz=34,col=NAVY){text(fa,x,y,sz,col);text(en,x,y+45,Math.round(sz*.62),col,'en',400)}
 function sun(x,y,r=66,col=GOLD){circle(x,y,r,col);for(let i=0;i<2;i++){g.beginPath();g.arc(x,y,r+17+i*14,0,7);g.lineWidth=3;g.strokeStyle=col;g.stroke()}}
-function header(s,idx){text('THE TOWER THAT RESPONDS',96,167,22,NAVY,'en',400,'left',760);text('برجی که واکنش نشان می‌دهد',96,218,27,NAVY,'fa',700,'left',800);rule(96,255,888,NAVY,2);text(String(idx+1).padStart(2,'0')+' / 13',978,171,22,NAVY,'en',400,'right');text(s.title,540,345,66,NAVY,'fa',700,'center',880);text(s.enTitle,540,410,25,NAVY,'en',400,'center',860)}
-function landscape(p,t){fill(p.sky,0,455,1080,930);fill(p.band,0,750,1080,135);for(let i=0;i<9;i++)fill(p.band,0,610+i*15,1080,Math.max(2,i*.7));poly([[0,1090],[90,1070],[160,1085],[220,1030],[330,1080],[450,1050],[550,1080],[650,1020],[780,1090],[900,1065],[1080,1080],[1080,1380],[0,1380]],p.far);
+function landscape(p,t){fill(p.sky,0,0,1080,2400);fill(p.band,0,750,1080,135);for(let i=0;i<9;i++)fill(p.band,0,610+i*15,1080,Math.max(2,i*.7));poly([[0,1090],[90,1070],[160,1085],[220,1030],[330,1080],[450,1050],[550,1080],[650,1020],[780,1090],[900,1065],[1080,1080],[1080,1380],[0,1380]],p.far);
  for(let j=0;j<14;j++){let x=j*88-20,h=45+(j*31%65);fill(p.mid,x,1190-h,75,h);poly([[x-4,1190-h],[x+36,1174-h],[x+80,1190-h]],p.near);for(let k=0;k<3;k++)fill(p.sky,x+12+k*19,1200-h,7,13)}
  fill(p.mid,0,1242,1080,138);for(let j=0;j<6;j++)fill(p.sky,(j*191+t*3)%1200-120,1270+j%3*24,95+j*12,5);fill(p.near,0,1360,1080,25);
 }
@@ -27,66 +25,72 @@ function tower(x,base,height,col=NAVY,opt={}){g.save();g.translate(x,base-height
  fill(col,-91,409,182,24);fill(col,-150,599,300,30);fill(col,-205,800,410,27);fill(col,-32,90,64,15);
  if(opt.lit){g.save();g.beginPath();g.rect(0,-10,350,1100);g.clip();g.fillStyle=opt.lit;g.fill(outer,'evenodd');for(const [a,b,wa,wb]of tiers){beam(wa,a,wb,b,7,opt.lit)}fill(opt.lit,0,599,150,30);fill(opt.lit,0,800,205,27);g.restore()}
  g.restore()}
-function schematic(){fill(NAVY,126,1248,828,85);text('نمایش شماتیک؛ تغییرات بزرگ‌نمایی شده',540,1277,27,PAPER,'fa');text('SCHEMATIC · DEFORMATION EXAGGERATED',540,1311,18,PAPER,'en',400)}
-function arrow(x1,y1,x2,y2,col=RED,width=8){beam(x1,y1,x2,y2,width,col);let a=Math.atan2(y2-y1,x2-x1),r=23;poly([[x2,y2],[x2-r*Math.cos(a-.55),y2-r*Math.sin(a-.55)],[x2-r*Math.cos(a+.55),y2-r*Math.sin(a+.55)]],col)}
+function arrow(x1,y1,x2,y2,col=RED,width=8){if(Math.hypot(x2-x1,y2-y1)<2)return;beam(x1,y1,x2,y2,width,col);let a=Math.atan2(y2-y1,x2-x1),r=23;poly([[x2,y2],[x2-r*Math.cos(a-.55),y2-r*Math.sin(a-.55)],[x2-r*Math.cos(a+.55),y2-r*Math.sin(a+.55)]],col)}
 function rulers(y,p){rule(160,1172,760,NAVY,3);rule(865,y,3,NAVY,1172-y);rule(850,y,30,RED,5);rule(850,1172,30,NAVY,5);for(let i=0;i<8;i++)rule(850,y+i*(1172-y)/8,15,NAVY,2)}
-function drawScene(i,t){let s=TL.scenes[i],u=t-s.start,p=palettes.warm;paperSheet(g,T,0,0,W,H);header(s,i);
- g.save();g.beginPath();g.rect(0,455,1080,930);g.clip();
- if(['summer-winter','return','end'].includes(s.id)){
-  let change=s.id==='return'?smooth(u/4):.5;landscape(p,t);g.save();g.beginPath();g.rect(540,455,540,930);g.clip();landscape(palettes.cold,t);g.restore();
-  sun(220,680,49,GOLD);circle(846,680,48,palettes.cold.sky);for(let k=0;k<6;k++)beam(846-55*Math.cos(k*Math.PI/3),680-55*Math.sin(k*Math.PI/3),846+55*Math.cos(k*Math.PI/3),680+55*Math.sin(k*Math.PI/3),3,palettes.cold.near);
-  const zoom=1+.012*Math.sin(clamp(u/6)*1.5);g.save();g.translate(540,1150);g.scale(zoom,zoom);g.translate(-540,-1150);tower(300,1300,650,NAVY,{lit:'#BA5C3E'});tower(780,1300,650,NAVY,{lit:BLUE});g.restore();
-  label('تابستون','SUMMER',295,523,37);label('زمستون','WINTER',780,523,37);fill(PAPER,535,455,10,930);fill(NAVY,196,1348,214,36);fill(NAVY,670,1348,214,36);
-  if(s.id==='end'){label('گرما: انبساط','HEAT: EXPANSION',290,1170,29,PAPER);label('سرما: انقباض','COLD: CONTRACTION',785,1170,29,PAPER)}
+// Full-bleed art: the print itself fills the portrait frame. Text is drawn only
+// by subtitles(), after the art camera has been restored to screen coordinates.
+function artCamera(){g.translate(0,-719);g.scale(1,1.8)}
+function city(p,t){landscape(p,t);fill(p.near,0,1380,1080,700)}
+function winterSky(p,t){city(p,t);circle(846,680,48,p.sky);for(let k=0;k<3;k++)beam(846-55*Math.cos(k*Math.PI/3),680-55*Math.sin(k*Math.PI/3),846+55*Math.cos(k*Math.PI/3),680+55*Math.sin(k*Math.PI/3),3,p.near)}
+function opener(t){
+ const pull=smooth(t/1.15),z=lerp(2.4,1,pull),pivot=[540,1040];
+ g.save();g.translate(...pivot);g.scale(z,z);g.translate(-pivot[0],-pivot[1]);
+ city(palettes.warm,t);sun(830,645,58,GOLD);tower(540,1350,810,NAVY,{lit:RED});
+ // A print pull changes the season at the spoken winter reveal. At the question,
+ // the same tower is held between warm/cold inks: no exaggerated size claim.
+ const cold=seg(t,2.12,2.65),split=t<3.45?cold:lerp(1,.5,smooth((t-3.45)/.65));
+ if(cold>0){g.save();g.clip(wipeRegion([0,0,1080,2400],'left',split,19,20));winterSky(palettes.cold,t);tower(540,1350,810,NAVY,{lit:BLUE});g.restore()}
+ g.restore();
+ // The first ink pull is fast enough that the first spoken line starts on the
+ // landmark, while its steep camera pullback delivers a visual reveal.
+ if(t<.42){let x=lerp(-50,1140,t/.42);g.save();squeegee(g,[x,-40],[x,2100],[1,0],{color:RED,handle:0,scale:1});g.restore()}
+}
+function drawScene(i,t){const s=TL.scenes[i],u=t-s.start;let p=s.id==='cold'?palettes.cold:palettes.warm;
+ fill(p.sky,0,0,W,H);g.save();artCamera();
+ if(s.id==='summer-winter')opener(t);
+ else if(['return','end'].includes(s.id)){
+  city(p,t);sun(810,645,58,GOLD);tower(540,1350,810,NAVY,{lit:RED});
+  g.save();g.beginPath();g.rect(540,0,540,2400);g.clip();winterSky(palettes.cold,t);tower(540,1350,810,NAVY,{lit:BLUE});g.restore();
  }else if(s.id==='iron'){
-  fill(p.sky,0,455,1080,930);for(let k=0;k<8;k++)fill(p.band,0,550+k*26,1080,4+k);
-  const z=lerp(.85,1.02,smooth(u/6));g.save();g.translate(540,940);g.scale(z,z);g.rotate(-.14);for(let x of [-430,360]){fill(NAVY,x,-520,80,1000);fill(BLUE,x+8,-520,13,1000)}
-  for(let k=-1;k<3;k++){let y=k*360-400;beam(-390,y,400,y+360,61,NAVY);beam(400,y,-390,y+360,61,NAVY);beam(-390,y+13,400,y+373,9,RED);for(let x of [-386,394]){circle(x,y+18,17,PAPER);circle(x,y+18,8,NAVY)}}
-  g.restore();fill(NAVY,190,1220,700,104);label('آهنِ اسکلت برج','THE IRON STRUCTURE',540,1254,38,PAPER);
+  fill(p.sky,0,400,1080,1700);for(let k=0;k<8;k++)fill(p.band,0,550+k*26,1080,4+k);
+  const z=lerp(.85,1.02,smooth(u/6));g.save();g.translate(540,940);g.scale(z,z);g.rotate(-.14);
+  for(let x of [-430,360]){fill(NAVY,x,-1000,80,2500);fill(BLUE,x+8,-1000,13,2500)}
+  for(let k=-2;k<5;k++){let y=k*360-400;beam(-390,y,400,y+360,61,NAVY);beam(400,y,-390,y+360,61,NAVY);beam(-390,y+13,400,y+373,9,RED);for(let x of [-386,394]){circle(x,y+18,17,PAPER);circle(x,y+18,8,NAVY)}}g.restore();
  }else if(['bar','small'].includes(s.id)){
-  fill(p.sky,0,455,1080,930);sun(812,650,62,GOLD);text('Fe',240,652,90,NAVY,'en',400);text('IRON',240,723,25,NAVY,'en',400);
-  let expansion=s.id==='bar'?smooth((u-.6)/3)*.17:.17;let len=520*(1+expansion);let bx=210,by=900;
-  fill(BLUE,bx,by-155,520,74);text('اندازهٔ اولیه',480,by-205,31,NAVY);text('BEFORE HEATING',480,by-254,20,NAVY,'en',400);
-  // Warm ink printed onto the growing bar.
+  fill(p.sky,0,400,1080,1700);sun(812,620,62,GOLD);
+  const expansion=s.id==='bar'?smooth((u-.6)/3)*.17:.17,len=520*(1+expansion),bx=210,by=950;
+  fill(BLUE,bx,by-155,520,74);
   poly([[bx,by],[bx+len,by],[bx+len+35,by-24],[bx+35,by-24]],GOLD);fill(RED,bx,by,len,91);poly([[bx+len,by],[bx+len+35,by-24],[bx+len+35,by+65],[bx+len,by+91]],NAVY);
   for(let k=0;k<5;k++)fill(PAPER,bx+k*116,by+10,3,70);
-  rule(bx,1076,520,NAVY,3);rule(bx,1061,3,NAVY,32);rule(bx+520,1061,3,NAVY,32);arrow(bx+520,1040,bx+len,1040,RED,5);
-  label(s.id==='small'?'در یک تکهٔ کوچک، به‌سختی دیده می‌شه':'گرم‌تر می‌شه، بلندتر می‌شه',s.id==='small'?'BARELY VISIBLE IN A SMALL PIECE':'WARMER IRON EXPANDS',540,1150,33);schematic();
+  rule(bx,1126,520,NAVY,3);rule(bx,1111,3,NAVY,32);rule(bx+520,1111,3,NAVY,32);arrow(bx+520,1090,bx+len,1090,RED,5);
  }else if(['height','cold'].includes(s.id)){
-  let cold=s.id==='cold';p=cold?palettes.cold:palettes.warm;landscape(p,t);let e=cold?1-smooth(u/3):smooth(u/4);let h=650+e*65;
-  tower(480,1172,650,p.far);tower(480,1172,h,NAVY,{lit:cold?BLUE:RED});rulers(1172-h,p);sun(790,650,47,cold?BLUE:GOLD);
-  label(cold?'آهن سرد می‌شه':'آهن گرم می‌شه',cold?'COOLING':'HEATING',520,1210,29);schematic();
+  const cold=s.id==='cold';city(p,t);const e=cold?1-smooth(u/3):smooth(u/4),h=650+e*65;
+  tower(480,1272,650,p.far);tower(480,1272,h,NAVY,{lit:cold?BLUE:RED});
+  rule(160,1272,760,NAVY,3);const top=1272-h;rule(865,top,3,NAVY,1272-top);rule(850,top,30,RED,5);rule(850,1272,30,NAVY,5);sun(790,650,47,cold?BLUE:GOLD);
  }else if(s.id==='turn'){
-  landscape(p,t);tower(510,1335,800,NAVY,{lit:RED});sun(lerp(1150,820,smooth(u/2.4)),700,70,GOLD);fill(NAVY,190,1155,700,113);text('یه حرکت دیگه هم هست…',540,1210,41,PAPER);
+  city(p,t);tower(510,1350,800,NAVY,{lit:RED});sun(lerp(1150,820,smooth(u/2.4)),700,70,GOLD);
  }else if(s.id==='uneven'){
-  fill(p.sky,0,455,1080,930);sun(858,645,66,GOLD);let grow=smooth((u-2)/3)*95;let l=484,r=665,y=1120;
-  fill(BLUE,280,670,85,450);fill(NAVY,277,1116,92,6);fill(RED,650,670-grow,85,450+grow);fill(GOLD,650,670-grow,17,450+grow);
-  for(let yy=700;yy<1100;yy+=80){fill(PAPER,280,yy,85,4);fill(PAPER,650,yy-grow*.5,85,4)}
+  fill(p.sky,0,400,1080,1700);sun(858,645,66,GOLD);const grow=smooth((u-2)/3)*95;
+  fill(BLUE,280,720,85,450);fill(NAVY,277,1166,92,6);fill(RED,650,720-grow,85,450+grow);fill(GOLD,650,720-grow,17,450+grow);
+  for(let yy=750;yy<1150;yy+=80){fill(PAPER,280,yy,85,4);fill(PAPER,650,yy-grow*.5,85,4)}
   for(let j=0;j<3;j++)arrow(818,760+j*70,755,800+j*70,GOLD,5);
-  label('سمت سایه','SHADED SIDE',319,1170,29);label('سمت آفتاب','SUNLIT SIDE',695,1170,29);schematic();
  }else if(['bend','sun'].includes(s.id)){
-  landscape(p,t);let shift=s.id==='sun'?lerp(90,-90,smooth(u/2.7)):smooth((u-.65)/2.1)*90;
-  let sx=s.id==='sun'?lerp(861,210,smooth(u/2.7)):861;sun(sx,660,59,GOLD);
-  tower(540,1215,700,p.far);tower(540,1215,700,NAVY,{bend:-shift,lit:RED});
-  // Positive bend parameter moves crown right; right sunlight must push crown left.
-  let target=540-shift*.7;arrow(sx>540?790:290,815,sx>540?650:430,850,GOLD,7);
-  arrow(540,508,target,508,RED,7);label('دور از سمت گرم‌تر','AWAY FROM THE WARMER SIDE',540,1187,30);schematic();
+  city(p,t);const shift=s.id==='sun'?lerp(90,-90,smooth(u/2.7)):smooth((u-.65)/2.1)*90,sx=s.id==='sun'?lerp(861,210,smooth(u/2.7)):861;
+  sun(sx,660,59,GOLD);tower(540,1315,750,p.far);tower(540,1315,750,NAVY,{bend:-shift,lit:RED});
+  arrow(sx>540?790:290,815,sx>540?650:430,850,GOLD,7);arrow(540,558,540-shift*.75,558,RED,7);
  }else if(s.id==='human'){
-  landscape(p,t);sun(814,635,55,GOLD);let h=lerp(900,765,smooth(u/8));tower(540,1350,h,NAVY,{lit:'#AE6749'});
+  city(p,t);sun(814,635,55,GOLD);const h=lerp(900,765,smooth(u/8));tower(540,1350,h,NAVY,{lit:'#AE6749'});
   for(let [x,y,z]of [[180,1330,1],[240,1340,.8],[825,1338,1],[880,1341,.75]]){circle(x,y-30*z,7*z,NAVY);fill(NAVY,x-5*z,y-23*z,10*z,23*z);beam(x-3*z,y,x-7*z,y+18*z,4*z,NAVY);beam(x+3*z,y,x+8*z,y+18*z,4*z,NAVY)}
-  fill(NAVY,205,1152,670,100);label('رفتار طبیعی سازه','A NATURAL STRUCTURAL RESPONSE',540,1186,32,PAPER);
  }
- g.restore();inkFinish(g,T,0,455,1080,930,.6,.65);rule(96,1384,888,NAVY,3);
- // Small graphic index reinforces the two concepts without competing with narration.
- text('PARIS / IRON / HEAT',96,1656,21,NAVY,'en',400,'left');text('انبساط  /  انقباض',980,1656,27,NAVY,'fa',700,'right');rule(96,1700,888,'#C8BCA8',3);rule(96,1700,888*clamp(t/TL.duration),RED,5);
- text('یک سازه، دو واکنش',96,1761,25,NAVY,'fa',400,'left');text('THERMAL RESPONSE',980,1761,21,NAVY,'en',400,'right');
+ g.restore();inkFinish(g,T,0,0,W,H,.6,.45);
 }
-function subtitles(t){const q=TL.cues.find(q=>t>=q.t0&&t<q.t1);if(!q)return;g.save();g.clip(wipeRegion([78,1417,924,180],'right',seg(t,q.t0,q.t0+.12),18,10));fill(NAVY,78,1417,924,180);fill(RED,78,1417,7,180);text(q.fa,540,1470,44,PAPER,'fa',700,'center',860);text(q.en,540,1544,31,PAPER,'en',400,'center',856);g.restore()}
-const scratch=document.createElement('canvas');scratch.width=W;scratch.height=H;const sg=scratch.getContext('2d');
-window.render=t=>{t=clamp(t,0,TL.duration-.00001);let i=TL.scenes.findIndex(s=>t>=s.start&&t<s.end);if(i<0)i=TL.scenes.length-1;let u=t-TL.scenes[i].start;
- if(i>0&&u<.42){drawScene(i-1,TL.scenes[i].start-.001);sg.clearRect(0,0,W,H);sg.drawImage(c,0,0);drawScene(i,t);// Keep both sides of the printed wipe deterministic.
- // New sheet prints over the previous illustration; preserve previous canvas outside ragged wipe.
- const fresh=document.createElement('canvas');fresh.width=W;fresh.height=H;fresh.getContext('2d').drawImage(c,0,0);g.drawImage(scratch,0,0);g.save();g.clip(wipeRegion([0,0,W,H],'right',u/.42,17,30));g.drawImage(fresh,0,0);g.restore();let x=-30+u/.42*(W+60);g.save();squeegee(g,[x,-40],[x,H+40],[1,0],{color:TL.scenes[i].id==='cold'?BLUE:RED,handle:0,scale:1});g.restore();
+function subtitles(t){const q=TL.cues.find(q=>t>=q.t0&&t<q.t1);if(!q)return;g.save();
+ g.clip(wipeRegion([78,1442,924,180],'right',seg(t,q.t0,q.t0+.12),18,10));
+ fill('rgba(16,32,44,.93)',78,1442,924,180);
+ text(q.fa,540,1495,44,PAPER,'fa',700,'center',860);text(q.en,540,1569,31,PAPER,'en',400,'center',856);g.restore()}
+const scratch=document.createElement('canvas'),fresh=document.createElement('canvas');for(const el of [scratch,fresh]){el.width=W;el.height=H}const sg=scratch.getContext('2d'),fg=fresh.getContext('2d');
+window.render=t=>{t=clamp(t,0,TL.duration-.00001);let i=TL.scenes.findIndex(s=>t>=s.start&&t<s.end);if(i<0)i=TL.scenes.length-1;const u=t-TL.scenes[i].start;
+ if(i>0&&u<.42){drawScene(i-1,TL.scenes[i].start-.001);sg.drawImage(c,0,0);drawScene(i,t);fg.drawImage(c,0,0);g.drawImage(scratch,0,0);g.save();g.clip(wipeRegion([0,0,W,H],'right',u/.42,17,30));g.drawImage(fresh,0,0);g.restore();const x=-30+u/.42*(W+60);g.save();squeegee(g,[x,-40],[x,H+40],[1,0],{color:TL.scenes[i].id==='cold'?BLUE:RED,handle:0,scale:1});g.restore();
  }else drawScene(i,t);subtitles(t)};
 window.DUR=TL.duration;window.TL=TL;window.READY=true;window.render(0);
 if(new URLSearchParams(location.search).has('render'))document.documentElement.classList.add('render');

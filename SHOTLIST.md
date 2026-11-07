@@ -5,18 +5,18 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 ## 1. 0.000–5.650 (5.650 s): summer-winter
 
 - shot: Full / front elevation / matched comparison
-- camera: Slow 3% push
+- camera: Macro lattice view → rapid pullback (0–1.15s), winter ink wipe (2.12–2.65s), seasonal split (3.45–4.10s)
 - lens: Virtual orthographic / compressed perspective
 - depth_of_field: Deep focus; depth by value and overlap
 - focus: Causal graphic / tower silhouette
 - subject: No people except stable scale silhouettes in human shot
 - lighting: Flat ink light from sun side
-- composition: Subject central; captions below illustration
-- action: Matched towers print in warm and cold palettes; preserve structural geometry.
+- composition: Full-bleed illustration; subtitles overlay y=1442–1622
+- action: One original tower silhouette is revealed from close range; warm ink becomes cold at the winter narration, then settles into a warm/cold split. No dramatic size change or text labels.
 - sfx: Two short paper stamps
 - music: None
 - transition: Motivated ink-pull wipe
-- On-screen title: تابستون بلندتر؟ / TALLER IN SUMMER?
+- On-screen text: Persian and English narration subtitles only.
 - Narration / captions:
   - 0.310–2.150: برج ایفل تابستونا بلندتره، / The Eiffel Tower is taller in summer.
   - 2.150–3.750: زمستونا کوتاه‌تر؛ / Shorter in winter.
@@ -31,12 +31,12 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - focus: Causal graphic / tower silhouette
 - subject: No people except stable scale silhouettes in human shot
 - lighting: Flat ink light from sun side
-- composition: Subject central; captions below illustration
+- composition: Full-bleed illustration; subtitles overlay y=1442–1622
 - action: A brace fills the frame; rivets and adjacent bracing reveal iron structure.
 - sfx: Mesh scrape, low metal tap
 - music: None
 - transition: Motivated ink-pull wipe
-- On-screen title: راز، توی آهنه / LOOK INSIDE THE IRON
+- On-screen text: Persian and English narration subtitles only.
 - Narration / captions:
   - 5.650–8.250: برای فهمیدنش، باید از نمای معروف برج فاصله بگیریم / To understand why, look beyond the landmark
   - 8.250–11.550: و بریم سراغ آهن‌هایی که اسکلتش رو ساختن. / to the iron that forms its structure.
@@ -50,12 +50,12 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - focus: Causal graphic / tower silhouette
 - subject: No people except stable scale silhouettes in human shot
 - lighting: Flat ink light from sun side
-- composition: Subject central; captions below illustration
+- composition: Full-bleed illustration; subtitles overlay y=1442–1622
 - action: Sun warms an iron bar; the bar extends against an original-length ghost.
 - sfx: Dry ink drag synchronized to growth
 - music: None
 - transition: Motivated ink-pull wipe
-- On-screen title: گرما، انبساط / HEAT → EXPANSION
+- On-screen text: Persian and English narration subtitles only.
 - Narration / captions:
   - 12.020–15.300: وقتی آهن گرم می‌شه، یه‌کم منبسط می‌شه؛ / When iron heats up, it expands a little.
   - 15.440–17.400: یعنی اندازه‌ش افزایش پیدا می‌کنه. / In other words, it gets bigger.
@@ -69,12 +69,12 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - focus: Causal graphic / tower silhouette
 - subject: No people except stable scale silhouettes in human shot
 - lighting: Flat ink light from sun side
-- composition: Subject central; captions below illustration
-- action: Show subtle actual-scale bar, then an enlarged comparison explicitly labelled schematic.
+- composition: Full-bleed illustration; subtitles overlay y=1442–1622
+- action: Show subtle actual-scale bar, then an enlarged comparison as an illustrative comparison.
 - sfx: Paper tick
 - music: None
 - transition: Motivated ink-pull wipe
-- On-screen title: تغییر کوچیک، اثر بزرگ / SMALL CHANGE. BIG STRUCTURE.
+- On-screen text: Persian and English narration subtitles only.
 - Narration / captions:
   - 17.530–19.100: این تغییر توی یه تکه آهن کوچیک، / In a small piece of iron,
   - 19.100–21.150: به‌سختی به چشم میاد. / the change is barely visible.
@@ -88,12 +88,12 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - focus: Causal graphic / tower silhouette
 - subject: No people except stable scale silhouettes in human shot
 - lighting: Flat ink light from sun side
-- composition: Subject central; captions below illustration
+- composition: Full-bleed illustration; subtitles overlay y=1442–1622
 - action: Tower schematic grows slightly against a paper baseline and height marker.
 - sfx: Scrape as marker rises
 - music: None
 - transition: Motivated ink-pull wipe
-- On-screen title: کمی بلندتر / A LITTLE TALLER
+- On-screen text: Persian and English narration subtitles only.
 - Narration / captions:
   - 21.210–23.400: اما اسکلت برج ایفل هم / But the Eiffel Tower’s structure
   - 23.400–25.250: به همین گرما واکنش نشون می‌ده / responds to that same heat,
@@ -108,12 +108,12 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - focus: Causal graphic / tower silhouette
 - subject: No people except stable scale silhouettes in human shot
 - lighting: Flat ink light from sun side
-- composition: Subject central; captions below illustration
+- composition: Full-bleed illustration; subtitles overlay y=1442–1622
 - action: Cold palette re-inks tower; exaggerated schematic height returns.
 - sfx: Short re-ink sweep
 - music: None
 - transition: Motivated ink-pull wipe
-- On-screen title: سرما، انقباض / COLD → CONTRACTION
+- On-screen text: Persian and English narration subtitles only.
 - Narration / captions:
   - 27.020–29.950: هوا که سرد بشه، آهن منقبض می‌شه / When it gets cold, the iron contracts.
   - 30.160–31.950: و برج دوباره کمی کوتاه‌تر می‌شه. / The tower becomes slightly shorter again.
@@ -127,12 +127,12 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - focus: Causal graphic / tower silhouette
 - subject: No people except stable scale silhouettes in human shot
 - lighting: Flat ink light from sun side
-- composition: Subject central; captions below illustration
+- composition: Full-bleed illustration; subtitles overlay y=1442–1622
 - action: Stable tower; lone sun enters upper right; room for curiosity.
 - sfx: Near-silence in foley and ambience
 - music: None
 - transition: Motivated ink-pull wipe
-- On-screen title: فقط بالا و پایین نیست… / THERE’S ANOTHER MOVEMENT
+- On-screen text: Persian and English narration subtitles only.
 - Narration / captions:
   - 32.100–35.050: ولی داستان فقط بالا و پایین رفتن نیست… / But there’s more than an up-and-down change…
 
@@ -145,12 +145,12 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - focus: Causal graphic / tower silhouette
 - subject: No people except stable scale silhouettes in human shot
 - lighting: Flat ink light from sun side
-- composition: Subject central; captions below illustration
+- composition: Full-bleed illustration; subtitles overlay y=1442–1622
 - action: Sunlit side warms and lengthens; shaded side stays cool. No numerical scale.
 - sfx: Two ink pulls, soft clamp
 - music: None
 - transition: Motivated ink-pull wipe
-- On-screen title: دو طرف، دو دما / TWO SIDES. DIFFERENT HEAT.
+- On-screen text: Persian and English narration subtitles only.
 - Narration / captions:
   - 35.190–38.350: خورشید همه طرف برج رو یکسان گرم نمی‌کنه. / The sun doesn’t heat every side equally.
   - 38.350–40.000: سمت آفتاب‌خورده گرم‌تر می‌شه / The sunlit side gets warmer
@@ -165,12 +165,12 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - focus: Causal graphic / tower silhouette
 - subject: No people except stable scale silhouettes in human shot
 - lighting: Flat ink light from sun side
-- composition: Subject central; captions below illustration
+- composition: Full-bleed illustration; subtitles overlay y=1442–1622
 - action: Right-side sun; tower schematic bends left, with directional arrow.
 - sfx: Clamp on result, soft directional scrape
 - music: None
 - transition: Motivated ink-pull wipe
-- On-screen title: دور از آفتاب / AWAY FROM THE SUN
+- On-screen text: Persian and English narration subtitles only.
 - Narration / captions:
   - 41.930–42.900: نتیجه؟ / The result?
   - 42.930–45.950: برج خیلی کم به سمت مخالف خورشید خم می‌شه؛ / The tower bends very slightly away from the sun.
@@ -185,12 +185,12 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - focus: Causal graphic / tower silhouette
 - subject: No people except stable scale silhouettes in human shot
 - lighting: Flat ink light from sun side
-- composition: Subject central; captions below illustration
+- composition: Full-bleed illustration; subtitles overlay y=1442–1622
 - action: Sun moves right to left; bend changes left to right.
 - sfx: Soft wind leads next shot
 - music: None
 - transition: Motivated ink-pull wipe
-- On-screen title: با حرکت خورشید / AS THE SUN MOVES
+- On-screen text: Persian and English narration subtitles only.
 - Narration / captions:
   - 48.420–51.950: با جابه‌جا شدن خورشید، جهت این تغییر هم عوض می‌شه. / As the sun moves, the direction changes too.
 
@@ -203,12 +203,12 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - focus: Causal graphic / tower silhouette
 - subject: No people except stable scale silhouettes in human shot
 - lighting: Flat ink light from sun side
-- composition: Subject central; captions below illustration
+- composition: Full-bleed illustration; subtitles overlay y=1442–1622
 - action: Perfectly stable tower, small visitors, park and river. No dramatic bending.
 - sfx: Restrained city-like air, paper steps
 - music: None
 - transition: Motivated ink-pull wipe
-- On-screen title: اون‌قدر کم که نمی‌بینی / TOO SMALL TO NOTICE
+- On-screen text: Persian and English narration subtitles only.
 - Narration / captions:
   - 52.120–54.100: البته این حرکت اون‌قدر کوچیکه / But this movement is so small
   - 54.280–56.850: که وقتی پای برج ایستادی، متوجهش نمی‌شی. / you won’t notice it standing below the tower.
@@ -224,12 +224,12 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - focus: Causal graphic / tower silhouette
 - subject: No people except stable scale silhouettes in human shot
 - lighting: Flat ink light from sun side
-- composition: Subject central; captions below illustration
-- action: Warm/cold ink sweep revisits opening with labels expansion and contraction.
+- composition: Full-bleed illustration; subtitles overlay y=1442–1622
+- action: One full-height tower, split between warm and cold inks, echoes the opening. No headings, labels, counters or footer.
 - sfx: Two soft print pulls
 - music: None
 - transition: Motivated ink-pull wipe
-- On-screen title: ثابت به نظر میاد / IT ONLY LOOKS STILL
+- On-screen text: Persian and English narration subtitles only.
 - Narration / captions:
   - 61.350–64.000: پس اون برجی که توی عکس‌ها کاملاً ثابت به نظر میاد، / So the tower that looks perfectly still in photos
   - 64.000–66.650: در طول روز هم واکنش نشون می‌ده. / is responding throughout the day.
@@ -243,12 +243,12 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - focus: Causal graphic / tower silhouette
 - subject: No people except stable scale silhouettes in human shot
 - lighting: Flat ink light from sun side
-- composition: Subject central; captions below illustration
-- action: Same tower with warm/cold halves; end on the viewer question, no logo.
+- composition: Full-bleed illustration; subtitles overlay y=1442–1622
+- action: One full-height tower, split between warm and cold inks, echoes the opening. No headings, labels, counters or footer.
 - sfx: Paper-settle tick, ambience tails within original duration
 - music: None
 - transition: Motivated ink-pull wipe
-- On-screen title: تو چی فکر می‌کردی؟ / DID YOU KNOW?
+- On-screen text: Persian and English narration subtitles only.
 - Narration / captions:
   - 66.870–68.550: قبل از این ویدئو، فکر می‌کردی / Before this video, did you think
   - 68.550–71.622: یه برج فلزی هم با گرما تغییر اندازه بده؟ / a metal tower could change size with heat?
