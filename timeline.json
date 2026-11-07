@@ -18,7 +18,7 @@
       "focus": "Causal graphic / tower silhouette",
       "lighting": "Flat ink light from sun side",
       "composition": "Full-bleed illustration; subtitles overlay y=1442–1622",
-      "on_screen_text": "Persian and English narration subtitles only"
+      "on_screen_text": "Persian narration subtitles only"
     },
     {
       "start": 5.65,
@@ -37,7 +37,7 @@
       "focus": "Causal graphic / tower silhouette",
       "lighting": "Flat ink light from sun side",
       "composition": "Full-bleed illustration; subtitles overlay y=1442–1622",
-      "on_screen_text": "Persian and English narration subtitles only"
+      "on_screen_text": "Persian narration subtitles only"
     },
     {
       "start": 12.02,
@@ -56,7 +56,7 @@
       "focus": "Causal graphic / tower silhouette",
       "lighting": "Flat ink light from sun side",
       "composition": "Full-bleed illustration; subtitles overlay y=1442–1622",
-      "on_screen_text": "Persian and English narration subtitles only"
+      "on_screen_text": "Persian narration subtitles only"
     },
     {
       "start": 17.53,
@@ -75,7 +75,7 @@
       "focus": "Causal graphic / tower silhouette",
       "lighting": "Flat ink light from sun side",
       "composition": "Full-bleed illustration; subtitles overlay y=1442–1622",
-      "on_screen_text": "Persian and English narration subtitles only"
+      "on_screen_text": "Persian narration subtitles only"
     },
     {
       "start": 21.21,
@@ -94,7 +94,7 @@
       "focus": "Causal graphic / tower silhouette",
       "lighting": "Flat ink light from sun side",
       "composition": "Full-bleed illustration; subtitles overlay y=1442–1622",
-      "on_screen_text": "Persian and English narration subtitles only"
+      "on_screen_text": "Persian narration subtitles only"
     },
     {
       "start": 27.02,
@@ -113,7 +113,7 @@
       "focus": "Causal graphic / tower silhouette",
       "lighting": "Flat ink light from sun side",
       "composition": "Full-bleed illustration; subtitles overlay y=1442–1622",
-      "on_screen_text": "Persian and English narration subtitles only"
+      "on_screen_text": "Persian narration subtitles only"
     },
     {
       "start": 32.1,
@@ -132,7 +132,7 @@
       "focus": "Causal graphic / tower silhouette",
       "lighting": "Flat ink light from sun side",
       "composition": "Full-bleed illustration; subtitles overlay y=1442–1622",
-      "on_screen_text": "Persian and English narration subtitles only"
+      "on_screen_text": "Persian narration subtitles only"
     },
     {
       "start": 35.19,
@@ -151,7 +151,7 @@
       "focus": "Causal graphic / tower silhouette",
       "lighting": "Flat ink light from sun side",
       "composition": "Full-bleed illustration; subtitles overlay y=1442–1622",
-      "on_screen_text": "Persian and English narration subtitles only"
+      "on_screen_text": "Persian narration subtitles only"
     },
     {
       "start": 41.93,
@@ -170,7 +170,7 @@
       "focus": "Causal graphic / tower silhouette",
       "lighting": "Flat ink light from sun side",
       "composition": "Full-bleed illustration; subtitles overlay y=1442–1622",
-      "on_screen_text": "Persian and English narration subtitles only"
+      "on_screen_text": "Persian narration subtitles only"
     },
     {
       "start": 48.42,
@@ -189,7 +189,7 @@
       "focus": "Causal graphic / tower silhouette",
       "lighting": "Flat ink light from sun side",
       "composition": "Full-bleed illustration; subtitles overlay y=1442–1622",
-      "on_screen_text": "Persian and English narration subtitles only"
+      "on_screen_text": "Persian narration subtitles only"
     },
     {
       "start": 52.12,
@@ -208,7 +208,7 @@
       "focus": "Causal graphic / tower silhouette",
       "lighting": "Flat ink light from sun side",
       "composition": "Full-bleed illustration; subtitles overlay y=1442–1622",
-      "on_screen_text": "Persian and English narration subtitles only"
+      "on_screen_text": "Persian narration subtitles only"
     },
     {
       "start": 61.35,
@@ -227,7 +227,7 @@
       "focus": "Causal graphic / tower silhouette",
       "lighting": "Flat ink light from sun side",
       "composition": "Full-bleed illustration; subtitles overlay y=1442–1622",
-      "on_screen_text": "Persian and English narration subtitles only"
+      "on_screen_text": "Persian narration subtitles only"
     },
     {
       "start": 66.87,
@@ -246,189 +246,222 @@
       "focus": "Causal graphic / tower silhouette",
       "lighting": "Flat ink light from sun side",
       "composition": "Full-bleed illustration; subtitles overlay y=1442–1622",
-      "on_screen_text": "Persian and English narration subtitles only"
+      "on_screen_text": "Persian narration subtitles only"
     }
   ],
   "cues": [
     {
-      "t0": 0.31,
-      "t1": 2.15,
+      "t0": 0,
+      "t1": 1.65,
       "fa": "برج ایفل تابستونا بلندتره،",
-      "en": "The Eiffel Tower is taller in summer."
+      "speechStart": 0.31,
+      "speechEnd": 2.15
     },
     {
-      "t0": 2.15,
-      "t1": 3.75,
+      "t0": 1.65,
+      "t1": 3.25,
       "fa": "زمستونا کوتاه‌تر؛",
-      "en": "Shorter in winter."
+      "speechStart": 2.15,
+      "speechEnd": 3.75
     },
     {
-      "t0": 4.02,
-      "t1": 5.35,
+      "t0": 3.5199999999999996,
+      "t1": 4.85,
       "fa": "چطور ممکنه؟",
-      "en": "How is that possible?"
+      "speechStart": 4.02,
+      "speechEnd": 5.35
     },
     {
-      "t0": 5.65,
-      "t1": 8.25,
+      "t0": 5.15,
+      "t1": 7.75,
       "fa": "برای فهمیدنش، باید از نمای معروف برج فاصله بگیریم",
-      "en": "To understand why, look beyond the landmark"
+      "speechStart": 5.65,
+      "speechEnd": 8.25
     },
     {
-      "t0": 8.25,
-      "t1": 11.55,
+      "t0": 7.75,
+      "t1": 11.05,
       "fa": "و بریم سراغ آهن‌هایی که اسکلتش رو ساختن.",
-      "en": "to the iron that forms its structure."
+      "speechStart": 8.25,
+      "speechEnd": 11.55
     },
     {
-      "t0": 12.02,
-      "t1": 15.3,
+      "t0": 11.52,
+      "t1": 14.8,
       "fa": "وقتی آهن گرم می‌شه، یه‌کم منبسط می‌شه؛",
-      "en": "When iron heats up, it expands a little."
+      "speechStart": 12.02,
+      "speechEnd": 15.3
     },
     {
-      "t0": 15.44,
-      "t1": 17.4,
+      "t0": 14.94,
+      "t1": 16.9,
       "fa": "یعنی اندازه‌ش افزایش پیدا می‌کنه.",
-      "en": "In other words, it gets bigger."
+      "speechStart": 15.44,
+      "speechEnd": 17.4
     },
     {
-      "t0": 17.53,
-      "t1": 19.1,
+      "t0": 17.03,
+      "t1": 18.6,
       "fa": "این تغییر توی یه تکه آهن کوچیک،",
-      "en": "In a small piece of iron,"
+      "speechStart": 17.53,
+      "speechEnd": 19.1
     },
     {
-      "t0": 19.1,
-      "t1": 21.15,
+      "t0": 18.6,
+      "t1": 20.65,
       "fa": "به‌سختی به چشم میاد.",
-      "en": "the change is barely visible."
+      "speechStart": 19.1,
+      "speechEnd": 21.15
     },
     {
-      "t0": 21.21,
-      "t1": 23.4,
+      "t0": 20.71,
+      "t1": 22.9,
       "fa": "اما اسکلت برج ایفل هم",
-      "en": "But the Eiffel Tower’s structure"
+      "speechStart": 21.21,
+      "speechEnd": 23.4
     },
     {
-      "t0": 23.4,
-      "t1": 25.25,
+      "t0": 22.9,
+      "t1": 24.75,
       "fa": "به همین گرما واکنش نشون می‌ده",
-      "en": "responds to that same heat,"
+      "speechStart": 23.4,
+      "speechEnd": 25.25
     },
     {
-      "t0": 25.34,
-      "t1": 26.9,
+      "t0": 24.84,
+      "t1": 26.4,
       "fa": "و ارتفاعش کمی بیشتر می‌شه.",
-      "en": "and becomes slightly taller."
+      "speechStart": 25.34,
+      "speechEnd": 26.9
     },
     {
-      "t0": 27.02,
-      "t1": 29.95,
+      "t0": 26.52,
+      "t1": 29.45,
       "fa": "هوا که سرد بشه، آهن منقبض می‌شه",
-      "en": "When it gets cold, the iron contracts."
+      "speechStart": 27.02,
+      "speechEnd": 29.95
     },
     {
-      "t0": 30.16,
-      "t1": 31.95,
+      "t0": 29.66,
+      "t1": 31.45,
       "fa": "و برج دوباره کمی کوتاه‌تر می‌شه.",
-      "en": "The tower becomes slightly shorter again."
+      "speechStart": 30.16,
+      "speechEnd": 31.95
     },
     {
-      "t0": 32.1,
-      "t1": 35.05,
+      "t0": 31.6,
+      "t1": 34.55,
       "fa": "ولی داستان فقط بالا و پایین رفتن نیست…",
-      "en": "But there’s more than an up-and-down change…"
+      "speechStart": 32.1,
+      "speechEnd": 35.05
     },
     {
-      "t0": 35.19,
-      "t1": 38.35,
+      "t0": 34.69,
+      "t1": 37.85,
       "fa": "خورشید همه طرف برج رو یکسان گرم نمی‌کنه.",
-      "en": "The sun doesn’t heat every side equally."
+      "speechStart": 35.19,
+      "speechEnd": 38.35
     },
     {
-      "t0": 38.35,
-      "t1": 40.0,
+      "t0": 37.85,
+      "t1": 39.5,
       "fa": "سمت آفتاب‌خورده گرم‌تر می‌شه",
-      "en": "The sunlit side gets warmer"
+      "speechStart": 38.35,
+      "speechEnd": 40.0
     },
     {
-      "t0": 40.0,
-      "t1": 41.8,
+      "t0": 39.5,
+      "t1": 41.3,
       "fa": "و بیشتر انبساط پیدا می‌کنه.",
-      "en": "and expands more."
+      "speechStart": 40.0,
+      "speechEnd": 41.8
     },
     {
-      "t0": 41.93,
-      "t1": 42.9,
+      "t0": 41.43,
+      "t1": 42.4,
       "fa": "نتیجه؟",
-      "en": "The result?"
+      "speechStart": 41.93,
+      "speechEnd": 42.9
     },
     {
-      "t0": 42.93,
-      "t1": 45.95,
+      "t0": 42.43,
+      "t1": 45.45,
       "fa": "برج خیلی کم به سمت مخالف خورشید خم می‌شه؛",
-      "en": "The tower bends very slightly away from the sun."
+      "speechStart": 42.93,
+      "speechEnd": 45.95
     },
     {
-      "t0": 46.09,
-      "t1": 48.25,
+      "t0": 45.59,
+      "t1": 47.75,
       "fa": "انگار داره از آفتاب فاصله می‌گیره.",
-      "en": "As if it’s leaning away from the sunlight."
+      "speechStart": 46.09,
+      "speechEnd": 48.25
     },
     {
-      "t0": 48.42,
-      "t1": 51.95,
+      "t0": 47.92,
+      "t1": 51.45,
       "fa": "با جابه‌جا شدن خورشید، جهت این تغییر هم عوض می‌شه.",
-      "en": "As the sun moves, the direction changes too."
+      "speechStart": 48.42,
+      "speechEnd": 51.95
     },
     {
-      "t0": 52.12,
-      "t1": 54.1,
+      "t0": 51.62,
+      "t1": 53.6,
       "fa": "البته این حرکت اون‌قدر کوچیکه",
-      "en": "But this movement is so small"
+      "speechStart": 52.12,
+      "speechEnd": 54.1
     },
     {
-      "t0": 54.28,
-      "t1": 56.85,
+      "t0": 53.78,
+      "t1": 56.35,
       "fa": "که وقتی پای برج ایستادی، متوجهش نمی‌شی.",
-      "en": "you won’t notice it standing below the tower."
+      "speechStart": 54.28,
+      "speechEnd": 56.85
     },
     {
-      "t0": 56.99,
-      "t1": 58.6,
+      "t0": 56.49,
+      "t1": 58.1,
       "fa": "این رفتار طبیعی سازه‌ست",
-      "en": "This is a natural response of the structure."
+      "speechStart": 56.99,
+      "speechEnd": 58.6
     },
     {
-      "t0": 58.6,
-      "t1": 61.15,
+      "t0": 58.1,
+      "t1": 60.65,
       "fa": "و به‌خودی‌خود نشونه آسیب نیست.",
-      "en": "By itself, it isn’t a sign of damage."
+      "speechStart": 58.6,
+      "speechEnd": 61.15
     },
     {
-      "t0": 61.35,
-      "t1": 64.0,
+      "t0": 60.85,
+      "t1": 63.5,
       "fa": "پس اون برجی که توی عکس‌ها کاملاً ثابت به نظر میاد،",
-      "en": "So the tower that looks perfectly still in photos"
+      "speechStart": 61.35,
+      "speechEnd": 64.0
     },
     {
-      "t0": 64.0,
-      "t1": 66.65,
+      "t0": 63.5,
+      "t1": 66.15,
       "fa": "در طول روز هم واکنش نشون می‌ده.",
-      "en": "is responding throughout the day."
+      "speechStart": 64.0,
+      "speechEnd": 66.65
     },
     {
-      "t0": 66.87,
-      "t1": 68.55,
+      "t0": 66.37,
+      "t1": 68.05,
       "fa": "قبل از این ویدئو، فکر می‌کردی",
-      "en": "Before this video, did you think"
+      "speechStart": 66.87,
+      "speechEnd": 68.55
     },
     {
-      "t0": 68.55,
-      "t1": 71.621541667,
+      "t0": 68.05,
+      "t1": 71.62154166666667,
       "fa": "یه برج فلزی هم با گرما تغییر اندازه بده؟",
-      "en": "a metal tower could change size with heat?"
+      "speechStart": 68.55,
+      "speechEnd": 71.621541667
     }
-  ]
+  ],
+  "subtitleLanguage": "fa",
+  "subtitleLeadSeconds": 0.5,
+  "subtitleFont": "Estedad ExtraBold"
 }

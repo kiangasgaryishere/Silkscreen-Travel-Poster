@@ -1,6 +1,6 @@
 # Audio-led shot timeline
 
-No music in any shot. Original recording duration: 71.621541667 s. All timing below is in seconds. Cuts are motivated by camera movement and matching subject geometry. Related diagrams retain a continuous camera. No slide or ink-wipe transition is used. Exact camera keyframes are in camera.js; editorial connections are in camera-edits.json. Captions have individual exact cue times in timeline.json and the SRT files.
+No music in any shot. Original recording duration: 71.621541667 s. All timing below is in seconds. Cuts are motivated by camera movement and matching subject geometry. Related diagrams retain a continuous camera. No slide or ink-wipe transition is used. Exact camera keyframes are in camera.js; editorial connections are in camera-edits.json. Persian-only captions use Estedad ExtraBold and start 0.5 seconds before the original speech boundary (clamped to zero). Caption times are in timeline.json and eiffel.fa.srt; original speech boundaries are retained separately.
 
 ## 1. 0.000–5.650 (5.650 s): summer-winter
 
@@ -16,11 +16,12 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - sfx: Sparse quiet air / material ticks; no repeating blade scrape and no music
 - music: None
 - transition: Camera match cut / continuous shot
-- On-screen text: Persian and English narration subtitles only.
+- On-screen text: Persian narration subtitles only.
 - Narration / captions:
-  - 0.310–2.150: برج ایفل تابستونا بلندتره، / The Eiffel Tower is taller in summer.
-  - 2.150–3.750: زمستونا کوتاه‌تر؛ / Shorter in winter.
-  - 4.020–5.350: چطور ممکنه؟ / How is that possible?
+  - 0.000–1.650: برج ایفل تابستونا بلندتره،
+  - 1.650–3.250: زمستونا کوتاه‌تر؛
+  - 3.520–4.850: چطور ممکنه؟
+  - 5.150–7.750: برای فهمیدنش، باید از نمای معروف برج فاصله بگیریم
 
 ## 2. 5.650–12.020 (6.370 s): iron
 
@@ -36,10 +37,10 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - sfx: Sparse quiet air / material ticks; no repeating blade scrape and no music
 - music: None
 - transition: Lattice match cut
-- On-screen text: Persian and English narration subtitles only.
+- On-screen text: Persian narration subtitles only.
 - Narration / captions:
-  - 5.650–8.250: برای فهمیدنش، باید از نمای معروف برج فاصله بگیریم / To understand why, look beyond the landmark
-  - 8.250–11.550: و بریم سراغ آهن‌هایی که اسکلتش رو ساختن. / to the iron that forms its structure.
+  - 7.750–11.050: و بریم سراغ آهن‌هایی که اسکلتش رو ساختن.
+  - 11.520–14.800: وقتی آهن گرم می‌شه، یه‌کم منبسط می‌شه؛
 
 ## 3. 12.020–17.530 (5.510 s): bar
 
@@ -55,10 +56,10 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - sfx: Sparse quiet air / material ticks; no repeating blade scrape and no music
 - music: None
 - transition: Material match cut
-- On-screen text: Persian and English narration subtitles only.
+- On-screen text: Persian narration subtitles only.
 - Narration / captions:
-  - 12.020–15.300: وقتی آهن گرم می‌شه، یه‌کم منبسط می‌شه؛ / When iron heats up, it expands a little.
-  - 15.440–17.400: یعنی اندازه‌ش افزایش پیدا می‌کنه. / In other words, it gets bigger.
+  - 14.940–16.900: یعنی اندازه‌ش افزایش پیدا می‌کنه.
+  - 17.030–18.600: این تغییر توی یه تکه آهن کوچیک،
 
 ## 4. 17.530–21.210 (3.680 s): small
 
@@ -74,10 +75,10 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - sfx: Sparse quiet air / material ticks; no repeating blade scrape and no music
 - music: None
 - transition: Continuous insert
-- On-screen text: Persian and English narration subtitles only.
+- On-screen text: Persian narration subtitles only.
 - Narration / captions:
-  - 17.530–19.100: این تغییر توی یه تکه آهن کوچیک، / In a small piece of iron,
-  - 19.100–21.150: به‌سختی به چشم میاد. / the change is barely visible.
+  - 18.600–20.650: به‌سختی به چشم میاد.
+  - 20.710–22.900: اما اسکلت برج ایفل هم
 
 ## 5. 21.210–27.020 (5.810 s): height
 
@@ -93,11 +94,11 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - sfx: Sparse quiet air / material ticks; no repeating blade scrape and no music
 - music: None
 - transition: Scale reveal
-- On-screen text: Persian and English narration subtitles only.
+- On-screen text: Persian narration subtitles only.
 - Narration / captions:
-  - 21.210–23.400: اما اسکلت برج ایفل هم / But the Eiffel Tower’s structure
-  - 23.400–25.250: به همین گرما واکنش نشون می‌ده / responds to that same heat,
-  - 25.340–26.900: و ارتفاعش کمی بیشتر می‌شه. / and becomes slightly taller.
+  - 22.900–24.750: به همین گرما واکنش نشون می‌ده
+  - 24.840–26.400: و ارتفاعش کمی بیشتر می‌شه.
+  - 26.520–29.450: هوا که سرد بشه، آهن منقبض می‌شه
 
 ## 6. 27.020–32.100 (5.080 s): cold
 
@@ -113,10 +114,10 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - sfx: Sparse quiet air / material ticks; no repeating blade scrape and no music
 - music: None
 - transition: Continuous seasonal grade
-- On-screen text: Persian and English narration subtitles only.
+- On-screen text: Persian narration subtitles only.
 - Narration / captions:
-  - 27.020–29.950: هوا که سرد بشه، آهن منقبض می‌شه / When it gets cold, the iron contracts.
-  - 30.160–31.950: و برج دوباره کمی کوتاه‌تر می‌شه. / The tower becomes slightly shorter again.
+  - 29.660–31.450: و برج دوباره کمی کوتاه‌تر می‌شه.
+  - 31.600–34.550: ولی داستان فقط بالا و پایین رفتن نیست…
 
 ## 7. 32.100–35.190 (3.090 s): turn
 
@@ -132,9 +133,9 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - sfx: Sparse quiet air / material ticks; no repeating blade scrape and no music
 - music: None
 - transition: Matched tower cut
-- On-screen text: Persian and English narration subtitles only.
+- On-screen text: Persian narration subtitles only.
 - Narration / captions:
-  - 32.100–35.050: ولی داستان فقط بالا و پایین رفتن نیست… / But there’s more than an up-and-down change…
+  - 34.690–37.850: خورشید همه طرف برج رو یکسان گرم نمی‌کنه.
 
 ## 8. 35.190–41.930 (6.740 s): uneven
 
@@ -150,11 +151,11 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - sfx: Sparse quiet air / material ticks; no repeating blade scrape and no music
 - music: None
 - transition: Sun match cut
-- On-screen text: Persian and English narration subtitles only.
+- On-screen text: Persian narration subtitles only.
 - Narration / captions:
-  - 35.190–38.350: خورشید همه طرف برج رو یکسان گرم نمی‌کنه. / The sun doesn’t heat every side equally.
-  - 38.350–40.000: سمت آفتاب‌خورده گرم‌تر می‌شه / The sunlit side gets warmer
-  - 40.000–41.800: و بیشتر انبساط پیدا می‌کنه. / and expands more.
+  - 37.850–39.500: سمت آفتاب‌خورده گرم‌تر می‌شه
+  - 39.500–41.300: و بیشتر انبساط پیدا می‌کنه.
+  - 41.430–42.400: نتیجه؟
 
 ## 9. 41.930–48.420 (6.490 s): bend
 
@@ -170,11 +171,11 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - sfx: Sparse quiet air / material ticks; no repeating blade scrape and no music
 - music: None
 - transition: Warm-side match cut
-- On-screen text: Persian and English narration subtitles only.
+- On-screen text: Persian narration subtitles only.
 - Narration / captions:
-  - 41.930–42.900: نتیجه؟ / The result?
-  - 42.930–45.950: برج خیلی کم به سمت مخالف خورشید خم می‌شه؛ / The tower bends very slightly away from the sun.
-  - 46.090–48.250: انگار داره از آفتاب فاصله می‌گیره. / As if it’s leaning away from the sunlight.
+  - 42.430–45.450: برج خیلی کم به سمت مخالف خورشید خم می‌شه؛
+  - 45.590–47.750: انگار داره از آفتاب فاصله می‌گیره.
+  - 47.920–51.450: با جابه‌جا شدن خورشید، جهت این تغییر هم عوض می‌شه.
 
 ## 10. 48.420–52.120 (3.700 s): sun
 
@@ -190,9 +191,9 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - sfx: Sparse quiet air / material ticks; no repeating blade scrape and no music
 - music: None
 - transition: Continuous sun follow
-- On-screen text: Persian and English narration subtitles only.
+- On-screen text: Persian narration subtitles only.
 - Narration / captions:
-  - 48.420–51.950: با جابه‌جا شدن خورشید، جهت این تغییر هم عوض می‌شه. / As the sun moves, the direction changes too.
+  - 51.620–53.600: البته این حرکت اون‌قدر کوچیکه
 
 ## 11. 52.120–61.350 (9.230 s): human
 
@@ -208,12 +209,12 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - sfx: Sparse quiet air / material ticks; no repeating blade scrape and no music
 - music: None
 - transition: Scale match cut
-- On-screen text: Persian and English narration subtitles only.
+- On-screen text: Persian narration subtitles only.
 - Narration / captions:
-  - 52.120–54.100: البته این حرکت اون‌قدر کوچیکه / But this movement is so small
-  - 54.280–56.850: که وقتی پای برج ایستادی، متوجهش نمی‌شی. / you won’t notice it standing below the tower.
-  - 56.990–58.600: این رفتار طبیعی سازه‌ست / This is a natural response of the structure.
-  - 58.600–61.150: و به‌خودی‌خود نشونه آسیب نیست. / By itself, it isn’t a sign of damage.
+  - 53.780–56.350: که وقتی پای برج ایستادی، متوجهش نمی‌شی.
+  - 56.490–58.100: این رفتار طبیعی سازه‌ست
+  - 58.100–60.650: و به‌خودی‌خود نشونه آسیب نیست.
+  - 60.850–63.500: پس اون برجی که توی عکس‌ها کاملاً ثابت به نظر میاد،
 
 ## 12. 61.350–66.870 (5.520 s): return
 
@@ -229,10 +230,10 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - sfx: Sparse quiet air / material ticks; no repeating blade scrape and no music
 - music: None
 - transition: Landmark match cut
-- On-screen text: Persian and English narration subtitles only.
+- On-screen text: Persian narration subtitles only.
 - Narration / captions:
-  - 61.350–64.000: پس اون برجی که توی عکس‌ها کاملاً ثابت به نظر میاد، / So the tower that looks perfectly still in photos
-  - 64.000–66.650: در طول روز هم واکنش نشون می‌ده. / is responding throughout the day.
+  - 63.500–66.150: در طول روز هم واکنش نشون می‌ده.
+  - 66.370–68.050: قبل از این ویدئو، فکر می‌کردی
 
 ## 13. 66.870–71.622 (4.752 s): end
 
@@ -248,8 +249,7 @@ No music in any shot. Original recording duration: 71.621541667 s. All timing be
 - sfx: Sparse quiet air / material ticks; no repeating blade scrape and no music
 - music: None
 - transition: Unbroken closing shot
-- On-screen text: Persian and English narration subtitles only.
+- On-screen text: Persian narration subtitles only.
 - Narration / captions:
-  - 66.870–68.550: قبل از این ویدئو، فکر می‌کردی / Before this video, did you think
-  - 68.550–71.622: یه برج فلزی هم با گرما تغییر اندازه بده؟ / a metal tower could change size with heat?
+  - 68.050–71.622: یه برج فلزی هم با گرما تغییر اندازه بده؟
 

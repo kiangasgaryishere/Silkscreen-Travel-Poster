@@ -32,7 +32,8 @@ rows=[
 (64.0,66.65,'در طول روز هم واکنش نشون می‌ده.','is responding throughout the day.'),
 (66.87,68.55,'قبل از این ویدئو، فکر می‌کردی','Before this video, did you think'),
 (68.55,71.621541667,'یه برج فلزی هم با گرما تغییر اندازه بده؟','a metal tower could change size with heat?')]
-cues=[dict(t0=a,t1=b,fa=fa,en=en) for a,b,fa,en in rows]
+cues=[dict(t0=max(0,a-.5),t1=b-.5,fa=fa,speechStart=a,speechEnd=b) for a,b,fa,en in rows]
+cues[-1]['t1']=1718917/24000
 scenes=[
 (0,5.65,'summer-winter','تابستون بلندتر؟','TALLER IN SUMMER?','Full / front elevation / matched comparison','Slow 3% push','Matched towers print in warm and cold palettes; preserve structural geometry.','Two short paper stamps'),
 (5.65,12.02,'iron','راز، توی آهنه','LOOK INSIDE THE IRON','Close-up / orthographic oblique material insert','Push through lattice, then lateral slide','A brace fills the frame; rivets and adjacent bracing reveal iron structure.','Mesh scrape, low metal tap'),
@@ -51,7 +52,7 @@ ss=[dict(start=a,end=b,duration=b-a,id=id,title=title,enTitle=en,shot=shot,camer
 # Revision: full-bleed animation, with narration subtitles as the only text.
 for shot in ss:
  shot.pop('title',None);shot.pop('enTitle',None)
- shot['on_screen_text']='Persian and English narration subtitles only'
+ shot['on_screen_text']='Persian narration subtitles only'
  shot['composition']='Full-bleed illustration; subtitles overlay y=1442–1622'
  shot['action']=shot['action'].replace('explicitly labelled schematic','as an illustrative comparison').replace('labelled','illustrative')
  if shot['id']=='summer-winter':
@@ -66,18 +67,18 @@ for shot in ss:
   shot['transition']=edit['kind']
   shot['camera']=edit['in']+'; camera.js owns the exact time-keyed track'
  shot['sfx']='Sparse quiet air / material ticks; no repeating blade scrape and no music'
-json.dump({'duration':1718917/24000,'scenes':ss,'cues':cues},open(D/'timeline.json','w'),ensure_ascii=False,indent=2)
+json.dump({'duration':1718917/24000,'scenes':ss,'cues':cues,'subtitleLanguage':'fa','subtitleLeadSeconds':.5,'subtitleFont':'Estedad ExtraBold'},open(D/'timeline.json','w'),ensure_ascii=False,indent=2)
 def stamp(t):
  ms=round(t*1000);return f'{ms//3600000:02}:{ms//60000%60:02}:{ms//1000%60:02},{ms%1000:03}'
-for lang in ['fa','en','bilingual']:
- text='\n\n'.join(f'{i+1}\n{stamp(c["t0"])} --> {stamp(c["t1"])}\n'+(c['fa']+'\n'+c['en'] if lang=='bilingual' else c[lang]) for i,c in enumerate(cues))+'\n'
+for lang in ['fa']:
+ text='\n\n'.join(f'{i+1}\n{stamp(c["t0"])} --> {stamp(c["t1"])}\n'+c['fa'] for i,c in enumerate(cues))+'\n'
  (D/f'eiffel.{lang}.srt').write_text(text)
 with open(D/'SHOTLIST.md','w') as f:
- f.write('# Audio-led shot timeline\n\nNo music in any shot. Original recording duration: 71.621541667 s. All timing below is in seconds. Cuts are motivated by camera movement and matching subject geometry. Related diagrams retain a continuous camera. No slide or ink-wipe transition is used. Exact camera keyframes are in camera.js; editorial connections are in camera-edits.json. Captions have individual exact cue times in timeline.json and the SRT files.\n\n')
+ f.write('# Audio-led shot timeline\n\nNo music in any shot. Original recording duration: 71.621541667 s. All timing below is in seconds. Cuts are motivated by camera movement and matching subject geometry. Related diagrams retain a continuous camera. No slide or ink-wipe transition is used. Exact camera keyframes are in camera.js; editorial connections are in camera-edits.json. Persian-only captions use Estedad ExtraBold and start 0.5 seconds before the original speech boundary (clamped to zero). Caption times are in timeline.json and eiffel.fa.srt; original speech boundaries are retained separately.\n\n')
  for i,s in enumerate(ss):
   f.write(f'## {i+1}. {s["start"]:.3f}–{s["end"]:.3f} ({s["duration"]:.3f} s): {s["id"]}\n\n')
   for k in ['shot','camera','lens','depth_of_field','focus','subject','lighting','composition','action','sfx','music','transition']:f.write(f'- {k}: {s[k]}\n')
-  f.write('- On-screen text: Persian and English narration subtitles only.\n- Narration / captions:\n')
+  f.write('- On-screen text: Persian narration subtitles only.\n- Narration / captions:\n')
   for c in cues:
-   if s['start']<=c['t0']<s['end']:f.write(f'  - {c["t0"]:.3f}–{c["t1"]:.3f}: {c["fa"]} / {c["en"]}\n')
+   if s['start']<=c['t0']<s['end']:f.write(f'  - {c["t0"]:.3f}–{c["t1"]:.3f}: {c["fa"]}\n')
   f.write('\n')

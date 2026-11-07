@@ -1,7 +1,7 @@
 import {makeTextures,inkFinish} from './engine/silk.js';
 import {cameraAt} from './camera.js';
 const TL=await(await fetch('timeline.json')).json();
-await Promise.all([document.fonts.load('700 48px Persian','برج ایفل'),document.fonts.load('400 40px Persian','آهن'),document.fonts.load('400 34px English','SUMMER')]);
+await document.fonts.load('800 52px Persian','برج ایفل؛ آهن و گرما');
 const c=document.getElementById('c'),g=c.getContext('2d');const W=1080,H=1920,PAPER='#F3EAD8',NAVY='#192D3C',RED='#BB503B',GOLD='#E3AF4E',BLUE='#548291',T=makeTextures(PAPER,24);
 const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)),lerp=(a,b,t)=>a+(b-a)*t,smooth=x=>{x=clamp(x);return x*x*(3-2*x)},seg=(t,a,b)=>clamp((t-a)/(b-a));
 const palettes={warm:{sky:'#EDCD9E',band:'#DF9A68',far:'#B67F65',mid:'#577976',near:NAVY,accent:RED},cold:{sky:'#DCE6E1',band:'#AAC5C8',far:'#839FA9',mid:'#547889',near:NAVY,accent:'#41738E'}};
@@ -9,7 +9,6 @@ function fill(col,x,y,w,h){g.fillStyle=col;g.fillRect(x,y,w,h)}
 function poly(pts,col){g.fillStyle=col;g.beginPath();pts.forEach(([x,y],i)=>i?g.lineTo(x,y):g.moveTo(x,y));g.closePath();g.fill()}
 function circle(x,y,r,col){g.fillStyle=col;g.beginPath();g.arc(x,y,r,0,7);g.fill()}
 function beam(x1,y1,x2,y2,w,col){let d=Math.max(.001,Math.hypot(x2-x1,y2-y1)),nx=(y1-y2)/d*w/2,ny=(x2-x1)/d*w/2;poly([[x1+nx,y1+ny],[x2+nx,y2+ny],[x2-nx,y2-ny],[x1-nx,y1-ny]],col)}
-function text(s,x,y,size=44,col=NAVY,lang='fa',weight=700,align='center',max=900){g.save();g.direction=lang==='fa'?'rtl':'ltr';g.textAlign=align;g.textBaseline='middle';g.fillStyle=col;let fs=size;do{g.font=`${weight} ${fs}px ${lang==='fa'?'Persian':'English'}`;if(g.measureText(s).width<=max)break;fs--}while(fs>20);g.fillText(s,x,y);g.restore()}
 function rule(x,y,w,col=NAVY,h=3){fill(col,x,y,w,h)}
 function sun(x,y,r=66,col=GOLD){circle(x,y,r,col);for(let i=0;i<2;i++){g.beginPath();g.arc(x,y,r+17+i*14,0,7);g.lineWidth=3;g.strokeStyle=col;g.stroke()}}
 function landscape(p,t){fill(p.sky,0,0,1080,2400);fill(p.band,0,750,1080,135);for(let i=0;i<9;i++)fill(p.band,0,610+i*15,1080,Math.max(2,i*.7));poly([[0,1090],[90,1070],[160,1085],[220,1030],[330,1080],[450,1050],[550,1080],[650,1020],[780,1090],[900,1065],[1080,1080],[1080,1380],[0,1380]],p.far);
@@ -79,10 +78,30 @@ function drawScene(i,t){const s=TL.scenes[i],u=t-s.start;let p=s.id==='cold'?sea
  }
  g.restore();inkFinish(g,T,0,0,W,H,.6,.45);
 }
+// Persian-only captions. Estedad ExtraBold preserves connected RTL shaping.
+function captionLayout(value){
+ const words=value.split(/\s+/),max=840;let size=52,lines=[value],widths=[];
+ for(;size>=42;size--){
+  g.font=`800 ${size}px Persian`;
+  if(g.measureText(value).width<=max){lines=[value];break}
+  let best=null;
+  for(let cut=1;cut<words.length;cut++){
+   const candidate=[words.slice(0,cut).join(' '),words.slice(cut).join(' ')],w=candidate.map(s=>g.measureText(s).width);
+   const cost=Math.max(...w)+Math.abs(w[0]-w[1])*.25;
+   if(!best||cost<best.cost)best={lines:candidate,cost};
+  }
+  lines=best.lines;if(lines.every(s=>g.measureText(s).width<=max))break;
+ }
+ g.font=`800 ${size}px Persian`;widths=lines.map(s=>g.measureText(s).width);
+ const height=lines.length===1?108:180,width=Math.min(924,Math.max(200,Math.max(...widths)+76));
+ return{lines,size,widths,x:(W-width)/2,y:1622-height,width,height};
+}
 function subtitles(t){const q=TL.cues.find(q=>t>=q.t0&&t<q.t1);if(!q)return;g.save();
- // Captions stay locked to the screen; no sliding text reveals.
- fill('rgba(16,32,44,.93)',78,1442,924,180);
- text(q.fa,540,1495,44,PAPER,'fa',700,'center',860);text(q.en,540,1569,31,PAPER,'en',400,'center',856);g.restore()}
+ const l=captionLayout(q.fa);g.fillStyle='rgba(16,32,44,.91)';g.beginPath();g.roundRect(l.x,l.y,l.width,l.height,22);g.fill();
+ g.direction='rtl';g.textAlign='center';g.textBaseline='middle';g.fillStyle='#FFF7E8';g.font=`800 ${l.size}px Persian`;
+ l.lines.forEach((line,i)=>g.fillText(line,540,l.y+l.height/2+(i-(l.lines.length-1)/2)*68));g.restore();
+}
+window.captionLayout=captionLayout;
 window.render=t=>{
  t=clamp(t,0,TL.duration-.00001);let i=TL.scenes.findIndex(s=>t>=s.start&&t<s.end);if(i<0)i=TL.scenes.length-1;
  const cam=cameraAt(t,TL.scenes);
