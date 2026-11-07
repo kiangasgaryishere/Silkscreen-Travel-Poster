@@ -6,6 +6,8 @@ The current revision removes all headings, labels, counters, corner text and foo
 
 ## Files
 
+- `cover.png`: standalone vertical Reel cover in the film’s silkscreen style, with the short Persian headline «ایفل قد می‌کشه؟».
+
 - `eiffel-reel.mp4`: final 1080×1920 video (when built).
 - `eiffel.fa.srt`: Persian-only captions, with the same 0.5-second lead as the burned-in video.
 - `timeline.json`: shot and caption timeline.

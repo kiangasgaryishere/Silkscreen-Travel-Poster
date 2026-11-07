@@ -7,3 +7,5 @@ Persian subtitle font: Estedad variable font, weight 800 (ExtraBold), Copyright 
 Production tools (not embedded audiovisual assets): Chromium / Playwright, FFmpeg, NumPy, SciPy and SoundFile. Offline Whisper ONNX models via k2-fsa/sherpa-onnx were used to cross-check phrase locations; captions use the supplied script rather than raw machine transcription.
 
 Scientific content follows the supplied narrative; diagrams are qualitative and exaggerated; their labels were removed at the user’s request. No numerical thermal expansion claims or measured movement scales are introduced.
+
+Standalone Reel cover (cover.png): AI-generated for this project from the film’s style reference, with the Persian headline «ایفل قد می‌کشه؟». Separate upload cover; not embedded into or substituted for the finished video.
