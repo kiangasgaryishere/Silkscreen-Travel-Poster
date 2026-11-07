@@ -1,0 +1,11 @@
+THE TOWER THAT RESPONDS / برجی که واکنش نشان می‌دهد
+
+Narration, Persian script and direction: supplied by the user (eifel.wav, story.md, direction.md). Original recording retained without time stretching.
+Original film-specific illustration, animation, English subtitle translation, timeline and procedural sound design: created for this project. No stock footage, logos or music.
+Screen-print material engine: silk.js from lemomo-ai/lemo-opuscar, MIT licence; source https://github.com/lemomo-ai/lemo-opuscar, inspected at 5c05490cc55dfb54f8f4c333f0f0e79cb6500564. MIT notice preserved in engine/LICENSE.
+Persian font: Noto Sans Arabic regular and bold, Google/Noto, SIL Open Font License 1.1. https://github.com/notofonts/arabic
+English font: DejaVu Sans, DejaVu Fonts licence (Bitstream Vera derivative). https://dejavu-fonts.github.io/License.html
+Fonts copied from the environment's installed font packages. Local font licences included under assets/licenses/.
+Production tools (not embedded audiovisual assets): Chromium / Playwright, FFmpeg, NumPy, SciPy and SoundFile. Offline Whisper ONNX models via k2-fsa/sherpa-onnx were used to cross-check phrase locations; captions use the supplied script rather than raw machine transcription.
+
+Scientific content follows the supplied narrative; diagrams are qualitative and explicitly exaggerated. No numerical thermal expansion claims or measured movement scales are introduced.

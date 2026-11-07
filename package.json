@@ -1,0 +1,1 @@
+{"name":"eiffel-thermal-reel","private":true,"type":"module","scripts":{"preview":"node serve.mjs","render":"node render.mjs"},"dependencies":{"playwright-core":"1.56.1"}}

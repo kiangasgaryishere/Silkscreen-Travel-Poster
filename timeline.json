@@ -1,0 +1,447 @@
+{
+  "duration": 71.62154166666667,
+  "scenes": [
+    {
+      "start": 0,
+      "end": 5.65,
+      "duration": 5.65,
+      "id": "summer-winter",
+      "title": "تابستون بلندتر؟",
+      "enTitle": "TALLER IN SUMMER?",
+      "shot": "Full / front elevation / matched comparison",
+      "camera": "Slow 3% push",
+      "action": "Matched towers print in warm and cold palettes; preserve structural geometry.",
+      "sfx": "Two short paper stamps",
+      "music": "None",
+      "transition": "Motivated ink-pull wipe",
+      "subject": "No people except stable scale silhouettes in human shot",
+      "lens": "Virtual orthographic / compressed perspective",
+      "depth_of_field": "Deep focus; depth by value and overlap",
+      "focus": "Causal graphic / tower silhouette",
+      "lighting": "Flat ink light from sun side",
+      "composition": "Subject central; captions below illustration"
+    },
+    {
+      "start": 5.65,
+      "end": 12.02,
+      "duration": 6.369999999999999,
+      "id": "iron",
+      "title": "راز، توی آهنه",
+      "enTitle": "LOOK INSIDE THE IRON",
+      "shot": "Close-up / orthographic oblique material insert",
+      "camera": "Push through lattice, then lateral slide",
+      "action": "A brace fills the frame; rivets and adjacent bracing reveal iron structure.",
+      "sfx": "Mesh scrape, low metal tap",
+      "music": "None",
+      "transition": "Motivated ink-pull wipe",
+      "subject": "No people except stable scale silhouettes in human shot",
+      "lens": "Virtual orthographic / compressed perspective",
+      "depth_of_field": "Deep focus; depth by value and overlap",
+      "focus": "Causal graphic / tower silhouette",
+      "lighting": "Flat ink light from sun side",
+      "composition": "Subject central; captions below illustration"
+    },
+    {
+      "start": 12.02,
+      "end": 17.53,
+      "duration": 5.510000000000002,
+      "id": "bar",
+      "title": "گرما، انبساط",
+      "enTitle": "HEAT → EXPANSION",
+      "shot": "Insert / top-down orthographic",
+      "camera": "Locked for legible comparison",
+      "action": "Sun warms an iron bar; the bar extends against an original-length ghost.",
+      "sfx": "Dry ink drag synchronized to growth",
+      "music": "None",
+      "transition": "Motivated ink-pull wipe",
+      "subject": "No people except stable scale silhouettes in human shot",
+      "lens": "Virtual orthographic / compressed perspective",
+      "depth_of_field": "Deep focus; depth by value and overlap",
+      "focus": "Causal graphic / tower silhouette",
+      "lighting": "Flat ink light from sun side",
+      "composition": "Subject central; captions below illustration"
+    },
+    {
+      "start": 17.53,
+      "end": 21.21,
+      "duration": 3.6799999999999997,
+      "id": "small",
+      "title": "تغییر کوچیک، اثر بزرگ",
+      "enTitle": "SMALL CHANGE. BIG STRUCTURE.",
+      "shot": "Macro / top-down",
+      "camera": "Pull back from bar to a pair of beams",
+      "action": "Show subtle actual-scale bar, then an enlarged comparison explicitly labelled schematic.",
+      "sfx": "Paper tick",
+      "music": "None",
+      "transition": "Motivated ink-pull wipe",
+      "subject": "No people except stable scale silhouettes in human shot",
+      "lens": "Virtual orthographic / compressed perspective",
+      "depth_of_field": "Deep focus; depth by value and overlap",
+      "focus": "Causal graphic / tower silhouette",
+      "lighting": "Flat ink light from sun side",
+      "composition": "Subject central; captions below illustration"
+    },
+    {
+      "start": 21.21,
+      "end": 27.02,
+      "duration": 5.809999999999999,
+      "id": "height",
+      "title": "کمی بلندتر",
+      "enTitle": "A LITTLE TALLER",
+      "shot": "Full / front elevation",
+      "camera": "Slow vertical crane preserving baseline",
+      "action": "Tower schematic grows slightly against a paper baseline and height marker.",
+      "sfx": "Scrape as marker rises",
+      "music": "None",
+      "transition": "Motivated ink-pull wipe",
+      "subject": "No people except stable scale silhouettes in human shot",
+      "lens": "Virtual orthographic / compressed perspective",
+      "depth_of_field": "Deep focus; depth by value and overlap",
+      "focus": "Causal graphic / tower silhouette",
+      "lighting": "Flat ink light from sun side",
+      "composition": "Subject central; captions below illustration"
+    },
+    {
+      "start": 27.02,
+      "end": 32.1,
+      "duration": 5.080000000000002,
+      "id": "cold",
+      "title": "سرما، انقباض",
+      "enTitle": "COLD → CONTRACTION",
+      "shot": "Full / same matched elevation",
+      "camera": "Lock baseline, small pullback",
+      "action": "Cold palette re-inks tower; exaggerated schematic height returns.",
+      "sfx": "Short re-ink sweep",
+      "music": "None",
+      "transition": "Motivated ink-pull wipe",
+      "subject": "No people except stable scale silhouettes in human shot",
+      "lens": "Virtual orthographic / compressed perspective",
+      "depth_of_field": "Deep focus; depth by value and overlap",
+      "focus": "Causal graphic / tower silhouette",
+      "lighting": "Flat ink light from sun side",
+      "composition": "Subject central; captions below illustration"
+    },
+    {
+      "start": 32.1,
+      "end": 35.19,
+      "duration": 3.0899999999999963,
+      "id": "turn",
+      "title": "فقط بالا و پایین نیست…",
+      "enTitle": "THERE’S ANOTHER MOVEMENT",
+      "shot": "Full / front elevation",
+      "camera": "Suspended slow push",
+      "action": "Stable tower; lone sun enters upper right; room for curiosity.",
+      "sfx": "Near-silence in foley and ambience",
+      "music": "None",
+      "transition": "Motivated ink-pull wipe",
+      "subject": "No people except stable scale silhouettes in human shot",
+      "lens": "Virtual orthographic / compressed perspective",
+      "depth_of_field": "Deep focus; depth by value and overlap",
+      "focus": "Causal graphic / tower silhouette",
+      "lighting": "Flat ink light from sun side",
+      "composition": "Subject central; captions below illustration"
+    },
+    {
+      "start": 35.19,
+      "end": 41.93,
+      "duration": 6.740000000000002,
+      "id": "uneven",
+      "title": "دو طرف، دو دما",
+      "enTitle": "TWO SIDES. DIFFERENT HEAT.",
+      "shot": "Medium / orthographic diagram",
+      "camera": "Push toward two parallel structural strips",
+      "action": "Sunlit side warms and lengthens; shaded side stays cool. No numerical scale.",
+      "sfx": "Two ink pulls, soft clamp",
+      "music": "None",
+      "transition": "Motivated ink-pull wipe",
+      "subject": "No people except stable scale silhouettes in human shot",
+      "lens": "Virtual orthographic / compressed perspective",
+      "depth_of_field": "Deep focus; depth by value and overlap",
+      "focus": "Causal graphic / tower silhouette",
+      "lighting": "Flat ink light from sun side",
+      "composition": "Subject central; captions below illustration"
+    },
+    {
+      "start": 41.93,
+      "end": 48.42,
+      "duration": 6.490000000000002,
+      "id": "bend",
+      "title": "دور از آفتاب",
+      "enTitle": "AWAY FROM THE SUN",
+      "shot": "Full / schematic front elevation",
+      "camera": "Locked framing for causal direction",
+      "action": "Right-side sun; tower schematic bends left, with directional arrow.",
+      "sfx": "Clamp on result, soft directional scrape",
+      "music": "None",
+      "transition": "Motivated ink-pull wipe",
+      "subject": "No people except stable scale silhouettes in human shot",
+      "lens": "Virtual orthographic / compressed perspective",
+      "depth_of_field": "Deep focus; depth by value and overlap",
+      "focus": "Causal graphic / tower silhouette",
+      "lighting": "Flat ink light from sun side",
+      "composition": "Subject central; captions below illustration"
+    },
+    {
+      "start": 48.42,
+      "end": 52.12,
+      "duration": 3.6999999999999957,
+      "id": "sun",
+      "title": "با حرکت خورشید",
+      "enTitle": "AS THE SUN MOVES",
+      "shot": "Full / front schematic",
+      "camera": "Lateral truck following sun",
+      "action": "Sun moves right to left; bend changes left to right.",
+      "sfx": "Soft wind leads next shot",
+      "music": "None",
+      "transition": "Motivated ink-pull wipe",
+      "subject": "No people except stable scale silhouettes in human shot",
+      "lens": "Virtual orthographic / compressed perspective",
+      "depth_of_field": "Deep focus; depth by value and overlap",
+      "focus": "Causal graphic / tower silhouette",
+      "lighting": "Flat ink light from sun side",
+      "composition": "Subject central; captions below illustration"
+    },
+    {
+      "start": 52.12,
+      "end": 61.35,
+      "duration": 9.230000000000004,
+      "id": "human",
+      "title": "اون‌قدر کم که نمی‌بینی",
+      "enTitle": "TOO SMALL TO NOTICE",
+      "shot": "Wide / slight low-angle illustration",
+      "camera": "Gentle pullback to visitors for scale",
+      "action": "Perfectly stable tower, small visitors, park and river. No dramatic bending.",
+      "sfx": "Restrained city-like air, paper steps",
+      "music": "None",
+      "transition": "Motivated ink-pull wipe",
+      "subject": "No people except stable scale silhouettes in human shot",
+      "lens": "Virtual orthographic / compressed perspective",
+      "depth_of_field": "Deep focus; depth by value and overlap",
+      "focus": "Causal graphic / tower silhouette",
+      "lighting": "Flat ink light from sun side",
+      "composition": "Subject central; captions below illustration"
+    },
+    {
+      "start": 61.35,
+      "end": 66.87,
+      "duration": 5.520000000000003,
+      "id": "return",
+      "title": "ثابت به نظر میاد",
+      "enTitle": "IT ONLY LOOKS STILL",
+      "shot": "Full / front elevation",
+      "camera": "Slow push into same opening geometry",
+      "action": "Warm/cold ink sweep revisits opening with labels expansion and contraction.",
+      "sfx": "Two soft print pulls",
+      "music": "None",
+      "transition": "Motivated ink-pull wipe",
+      "subject": "No people except stable scale silhouettes in human shot",
+      "lens": "Virtual orthographic / compressed perspective",
+      "depth_of_field": "Deep focus; depth by value and overlap",
+      "focus": "Causal graphic / tower silhouette",
+      "lighting": "Flat ink light from sun side",
+      "composition": "Subject central; captions below illustration"
+    },
+    {
+      "start": 66.87,
+      "end": 71.621541667,
+      "duration": 4.751541666999998,
+      "id": "end",
+      "title": "تو چی فکر می‌کردی؟",
+      "enTitle": "DID YOU KNOW?",
+      "shot": "Full / matched front elevation",
+      "camera": "Settle and hold",
+      "action": "Same tower with warm/cold halves; end on the viewer question, no logo.",
+      "sfx": "Paper-settle tick, ambience tails within original duration",
+      "music": "None",
+      "transition": "Motivated ink-pull wipe",
+      "subject": "No people except stable scale silhouettes in human shot",
+      "lens": "Virtual orthographic / compressed perspective",
+      "depth_of_field": "Deep focus; depth by value and overlap",
+      "focus": "Causal graphic / tower silhouette",
+      "lighting": "Flat ink light from sun side",
+      "composition": "Subject central; captions below illustration"
+    }
+  ],
+  "cues": [
+    {
+      "t0": 0.31,
+      "t1": 2.15,
+      "fa": "برج ایفل تابستونا بلندتره،",
+      "en": "The Eiffel Tower is taller in summer."
+    },
+    {
+      "t0": 2.15,
+      "t1": 3.75,
+      "fa": "زمستونا کوتاه‌تر؛",
+      "en": "Shorter in winter."
+    },
+    {
+      "t0": 4.02,
+      "t1": 5.35,
+      "fa": "چطور ممکنه؟",
+      "en": "How is that possible?"
+    },
+    {
+      "t0": 5.65,
+      "t1": 8.25,
+      "fa": "برای فهمیدنش، باید از نمای معروف برج فاصله بگیریم",
+      "en": "To understand why, look beyond the landmark"
+    },
+    {
+      "t0": 8.25,
+      "t1": 11.55,
+      "fa": "و بریم سراغ آهن‌هایی که اسکلتش رو ساختن.",
+      "en": "to the iron that forms its structure."
+    },
+    {
+      "t0": 12.02,
+      "t1": 15.3,
+      "fa": "وقتی آهن گرم می‌شه، یه‌کم منبسط می‌شه؛",
+      "en": "When iron heats up, it expands a little."
+    },
+    {
+      "t0": 15.44,
+      "t1": 17.4,
+      "fa": "یعنی اندازه‌ش افزایش پیدا می‌کنه.",
+      "en": "In other words, it gets bigger."
+    },
+    {
+      "t0": 17.53,
+      "t1": 19.1,
+      "fa": "این تغییر توی یه تکه آهن کوچیک،",
+      "en": "In a small piece of iron,"
+    },
+    {
+      "t0": 19.1,
+      "t1": 21.15,
+      "fa": "به‌سختی به چشم میاد.",
+      "en": "the change is barely visible."
+    },
+    {
+      "t0": 21.21,
+      "t1": 23.4,
+      "fa": "اما اسکلت برج ایفل هم",
+      "en": "But the Eiffel Tower’s structure"
+    },
+    {
+      "t0": 23.4,
+      "t1": 25.25,
+      "fa": "به همین گرما واکنش نشون می‌ده",
+      "en": "responds to that same heat,"
+    },
+    {
+      "t0": 25.34,
+      "t1": 26.9,
+      "fa": "و ارتفاعش کمی بیشتر می‌شه.",
+      "en": "and becomes slightly taller."
+    },
+    {
+      "t0": 27.02,
+      "t1": 29.95,
+      "fa": "هوا که سرد بشه، آهن منقبض می‌شه",
+      "en": "When it gets cold, the iron contracts."
+    },
+    {
+      "t0": 30.16,
+      "t1": 31.95,
+      "fa": "و برج دوباره کمی کوتاه‌تر می‌شه.",
+      "en": "The tower becomes slightly shorter again."
+    },
+    {
+      "t0": 32.1,
+      "t1": 35.05,
+      "fa": "ولی داستان فقط بالا و پایین رفتن نیست…",
+      "en": "But there’s more than an up-and-down change…"
+    },
+    {
+      "t0": 35.19,
+      "t1": 38.35,
+      "fa": "خورشید همه طرف برج رو یکسان گرم نمی‌کنه.",
+      "en": "The sun doesn’t heat every side equally."
+    },
+    {
+      "t0": 38.35,
+      "t1": 40.0,
+      "fa": "سمت آفتاب‌خورده گرم‌تر می‌شه",
+      "en": "The sunlit side gets warmer"
+    },
+    {
+      "t0": 40.0,
+      "t1": 41.8,
+      "fa": "و بیشتر انبساط پیدا می‌کنه.",
+      "en": "and expands more."
+    },
+    {
+      "t0": 41.93,
+      "t1": 42.9,
+      "fa": "نتیجه؟",
+      "en": "The result?"
+    },
+    {
+      "t0": 42.93,
+      "t1": 45.95,
+      "fa": "برج خیلی کم به سمت مخالف خورشید خم می‌شه؛",
+      "en": "The tower bends very slightly away from the sun."
+    },
+    {
+      "t0": 46.09,
+      "t1": 48.25,
+      "fa": "انگار داره از آفتاب فاصله می‌گیره.",
+      "en": "As if it’s leaning away from the sunlight."
+    },
+    {
+      "t0": 48.42,
+      "t1": 51.95,
+      "fa": "با جابه‌جا شدن خورشید، جهت این تغییر هم عوض می‌شه.",
+      "en": "As the sun moves, the direction changes too."
+    },
+    {
+      "t0": 52.12,
+      "t1": 54.1,
+      "fa": "البته این حرکت اون‌قدر کوچیکه",
+      "en": "But this movement is so small"
+    },
+    {
+      "t0": 54.28,
+      "t1": 56.85,
+      "fa": "که وقتی پای برج ایستادی، متوجهش نمی‌شی.",
+      "en": "you won’t notice it standing below the tower."
+    },
+    {
+      "t0": 56.99,
+      "t1": 58.6,
+      "fa": "این رفتار طبیعی سازه‌ست",
+      "en": "This is a natural response of the structure."
+    },
+    {
+      "t0": 58.6,
+      "t1": 61.15,
+      "fa": "و به‌خودی‌خود نشونه آسیب نیست.",
+      "en": "By itself, it isn’t a sign of damage."
+    },
+    {
+      "t0": 61.35,
+      "t1": 64.0,
+      "fa": "پس اون برجی که توی عکس‌ها کاملاً ثابت به نظر میاد،",
+      "en": "So the tower that looks perfectly still in photos"
+    },
+    {
+      "t0": 64.0,
+      "t1": 66.65,
+      "fa": "در طول روز هم واکنش نشون می‌ده.",
+      "en": "is responding throughout the day."
+    },
+    {
+      "t0": 66.87,
+      "t1": 68.55,
+      "fa": "قبل از این ویدئو، فکر می‌کردی",
+      "en": "Before this video, did you think"
+    },
+    {
+      "t0": 68.55,
+      "t1": 71.621541667,
+      "fa": "یه برج فلزی هم با گرما تغییر اندازه بده؟",
+      "en": "a metal tower could change size with heat?"
+    }
+  ]
+}

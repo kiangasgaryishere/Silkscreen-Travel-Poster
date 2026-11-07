@@ -1,0 +1,17 @@
+# Export verification
+
+- Final image: 1080×1920, H.264 yuv420p, 1719 frames. Nominal 24 fps; last frame is shortened to meet the source audio duration exactly.
+- Original narration: 1,718,917 samples at 24,000 Hz = 71.6215416667 seconds.
+- Final video track: 1,718,917 ticks at 1/24,000 seconds.
+- Final audio track: 3,437,834 ticks at 1/48,000 seconds.
+- Final container duration: 71.621542 seconds as rounded by ffprobe.
+- Voice alignment checked against decoded export at 1, 12, 27, 42, 57 and 67 seconds: zero-sample lag at every checked position. Correlation 0.9896–0.9984 after mastering and foley.
+- Measured encoded audio: −14.44 LUFS integrated; −1.13 dBTP true peak. No music stem or music synthesis is present.
+- Full-duration browser playback completed: 1719 frames, zero dropped frames, no browser errors.
+- Complete export decoded successfully; no black-frame intervals reported by FFmpeg blackdetect.
+- Browser render: no JavaScript errors. Thirteen contiguous shots, 30 non-overlapping bilingual subtitle cues, all within the recording duration.
+- Subtitle fonts: Persian 34–44 px, English 31 px; both fitted within their safe caption band. Persian RTL shaping is rendered by Chromium using bundled Noto Sans Arabic.
+- Visual inspection: 12-frame contact sheet, enlarged bending diagram, warm/cold comparison, material insert and stable visitor-scale view. Bending goes away from the sun; all deliberately exaggerated deformation views carry bilingual schematic labels.
+- Timing basis: supplied script plus speech/silence boundaries in the recording. Offline Persian ASR was used as a phrase-location aid, but its transcription was inaccurate and was not substituted for the supplied script. Subtitle timings are phrase-level editorial alignment; word-level forced alignment has not been certified.
+
+Re-run structural and caption checks with the preview server running: `node validate.mjs`. Logs from this production run are in the local ignored `out/` directory.
